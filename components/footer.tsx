@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const footerLinks = {
   company: [
-    { href: "/about", label: "About Us" },
-    { href: "/how-it-works", label: "How It Works" },
+    // { href: "/about", label: "About Us" },
+    // { href: "/how-it-works", label: "How It Works" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contact" },
   ],
