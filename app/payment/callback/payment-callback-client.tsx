@@ -105,11 +105,48 @@ function normalizeStatus(status: string | null) {
     return "success";
   }
 
-  if (["failed", "cancelled", "canceled"].includes(normalized)) {
+  if (["failed", "cancelled", "canceled", "declined"].includes(normalized)) {
     return "failed";
   }
 
   return "pending";
+}
+
+function ErrorCircleIcon({ className }: { className: string }) {
+  return (
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  );
+}
+
+function LoadingIcon({ className }: { className: string }) {
+  return (
+    <svg
+      className={`${className} animate-spin`}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" strokeOpacity="0.25" />
+      <path
+        strokeLinecap="round"
+        d="M12 2A10 10 0 0 1 22 12"
+      />
+    </svg>
+  );
 }
 
 function statusCopy(status: ReturnType<typeof normalizeStatus>) {
@@ -121,17 +158,19 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
         "Your payment is complete. Return to ShareDrive so your wallet can refresh.",
       tone: "text-emerald-700 dark:text-emerald-300",
       bg: "bg-emerald-50 dark:bg-emerald-500/10",
+      icon: CheckCircleIcon,
     };
   }
 
   if (status === "failed") {
     return {
-      eyebrow: "Payment Update",
+      eyebrow: "Payment Failed",
       title: "Payment was not completed",
       message:
         "You can return to ShareDrive to check your wallet or try funding again.",
       tone: "text-rose-700 dark:text-rose-300",
       bg: "bg-rose-50 dark:bg-rose-500/10",
+      icon: ErrorCircleIcon,
     };
   }
 
@@ -142,12 +181,17 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
       "We are checking your payment status. Return to ShareDrive to refresh your wallet.",
     tone: "text-amber-700 dark:text-amber-300",
     bg: "bg-amber-50 dark:bg-amber-500/10",
+    icon: LoadingIcon,
   };
 }
+
+// Deep link scheme for mobile app redirection
+const DEEP_LINK_SCHEME = "com.example.shared_drive";
 
 export function PaymentCallbackClient() {
   const [currentUrl, setCurrentUrl] = useState("https://sharedrive.ng/payment/callback");
   const [copied, setCopied] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
   useEffect(() => {
     setCurrentUrl(window.location.href);
@@ -161,15 +205,44 @@ export function PaymentCallbackClient() {
     }
   }, [currentUrl]);
 
-  const status = normalizeStatus(params.get("status") ?? params.get("paymentStatus"));
+  const status = normalizeStatus(
+    params.get("status") ?? 
+    params.get("paymentStatus") ?? 
+    params.get("payment_status")
+  );
   const copy = statusCopy(status);
+  const StatusIcon = copy.icon;
+  
+  // Handle multiple payment reference parameter names from different providers
   const reference =
     params.get("tx_ref") ??
     params.get("paymentReference") ??
     params.get("transactionReference") ??
+    params.get("reference") ??
     "";
+  
   const transactionId =
-    params.get("transaction_id") ?? params.get("transactionReference") ?? "";
+    params.get("transaction_id") ?? 
+    params.get("transactionReference") ?? 
+    params.get("transactionId") ??
+    "";
+  
+  const amount = 
+    params.get("amount") ?? 
+    params.get("transaction_amount") ??
+    "";
+
+  // Build deep link with all payment parameters preserved
+  const deepLinkUrl = useMemo(() => {
+    const searchParams = new URLSearchParams();
+    params.forEach((value, key) => {
+      searchParams.set(key, value);
+    });
+    searchParams.set("sd_payment_callback", "1");
+    return `${DEEP_LINK_SCHEME}://payment/callback?${searchParams.toString()}`;
+  }, [params]);
+
+  // Build fallback web URL for when deep link fails
   const appUrl = useMemo(() => {
     try {
       const url = new URL(currentUrl);
@@ -180,6 +253,7 @@ export function PaymentCallbackClient() {
     }
   }, [currentUrl]);
 
+  // Auto-redirect to app on mobile with deep link support
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -192,52 +266,85 @@ export function PaymentCallbackClient() {
 
     const timer = window.setTimeout(() => {
       sessionStorage.setItem(`sd_payment_open:${currentUrl}`, "1");
-      window.location.assign(appUrl);
+      setIsRedirecting(true);
+      
+      // Try deep link first, fall back to web URL after delay
+      const fallbackTimer = window.setTimeout(() => {
+        window.location.assign(appUrl);
+      }, 1500);
+
+      window.location.assign(deepLinkUrl);
+      
+      return () => window.clearTimeout(fallbackTimer);
     }, 700);
 
     return () => window.clearTimeout(timer);
-  }, [appUrl, currentUrl, params]);
+  }, [deepLinkUrl, appUrl, currentUrl, params]);
 
   const openApp = () => {
-    window.location.assign(appUrl);
+    setIsRedirecting(true);
+    // Try deep link first with fallback to web URL
+    const fallbackTimer = window.setTimeout(() => {
+      window.location.assign(appUrl);
+    }, 1000);
+
+    window.location.assign(deepLinkUrl);
+    
+    return () => window.clearTimeout(fallbackTimer);
   };
 
   const copyReference = async () => {
     if (!reference) return;
 
-    await navigator.clipboard.writeText(reference);
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
+    try {
+      await navigator.clipboard.writeText(reference);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("[v0] Failed to copy reference:", error);
+    }
   };
 
   return (
     <main className="min-h-screen bg-white pt-24 text-gray-950 dark:bg-[#0f0f0f] dark:text-white">
       <section className="px-6 py-12 sm:py-16">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
-          <div>
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-12">
+          {/* Left side - Message & CTA */}
+          <div className="space-y-6">
             <div
-              className={`mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold ${copy.bg} ${copy.tone}`}
+              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all ${copy.bg} ${copy.tone}`}
             >
-              <CheckCircleIcon className="h-4 w-4" />
+              <StatusIcon className="h-4 w-4" />
               {copy.eyebrow}
             </div>
 
-            <h1 className="max-w-3xl text-4xl font-extrabold leading-tight tracking-normal text-gray-950 dark:text-white sm:text-6xl">
-              {copy.title}
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300">
-              {copy.message} If you are not automatically redirected, tap the
-              button below to go back to the app.
-            </p>
+            <div className="space-y-3">
+              <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-950 dark:text-white sm:text-5xl lg:text-6xl">
+                {copy.title}
+              </h1>
+              <p className="max-w-xl text-base leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg">
+                {copy.message}
+              </p>
+            </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:pt-4">
               <button
                 type="button"
                 onClick={openApp}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#57370D] px-6 py-3 text-base font-bold text-white shadow-lg shadow-[#57370D]/20 transition hover:bg-[#3d2609] focus:outline-none focus:ring-4 focus:ring-[#E8B26A]/40"
+                disabled={isRedirecting}
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#57370D] px-6 py-3 text-base font-bold text-white shadow-lg shadow-[#57370D]/20 transition hover:bg-[#3d2609] focus:outline-none focus:ring-4 focus:ring-[#E8B26A]/40 disabled:opacity-75 disabled:cursor-wait"
               >
-                Open ShareDrive
-                <ArrowRightIcon className="h-5 w-5" />
+                {isRedirecting ? (
+                  <>
+                    <LoadingIcon className="h-5 w-5" />
+                    Opening app...
+                  </>
+                ) : (
+                  <>
+                    Open ShareDrive
+                    <ArrowRightIcon className="h-5 w-5" />
+                  </>
+                )}
               </button>
               <Link
                 href="/"
@@ -248,52 +355,76 @@ export function PaymentCallbackClient() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl shadow-gray-950/5 dark:border-gray-800 dark:bg-[#171717] dark:shadow-black/30">
+          {/* Right side - Payment Summary */}
+          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl shadow-gray-950/5 dark:border-gray-800 dark:bg-[#171717] dark:shadow-black/30 sm:p-8">
             <div className="flex items-center gap-3 border-b border-gray-200 pb-5 dark:border-gray-800">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#57370D] text-white">
                 <WalletIcon className="h-6 w-6" />
               </div>
               <div>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
                   ShareDrive wallet
                 </p>
-                <h2 className="text-xl font-bold">Payment summary</h2>
+                <h2 className="text-lg font-bold text-gray-900 dark:text-white sm:text-xl">
+                  Payment summary
+                </h2>
               </div>
             </div>
 
-            <dl className="mt-6 space-y-5">
-              <div className="flex items-start justify-between gap-4">
-                <dt className="text-sm text-gray-500 dark:text-gray-400">Status</dt>
-                <dd className={`text-right text-sm font-bold capitalize ${copy.tone}`}>
+            <dl className="mt-6 space-y-4">
+              <div className="flex items-center justify-between gap-4">
+                <dt className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                  Status
+                </dt>
+                <dd className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-bold capitalize ${copy.bg} ${copy.tone}`}>
+                  <span className={`h-2 w-2 rounded-full ${copy.tone.replace("text-", "bg-")}`}></span>
                   {status}
                 </dd>
               </div>
+
+              {amount && (
+                <div className="flex items-center justify-between gap-4 pt-2 border-t border-gray-200 dark:border-gray-800">
+                  <dt className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                    Amount
+                  </dt>
+                  <dd className="text-right text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    ₦{parseFloat(amount).toLocaleString()}
+                  </dd>
+                </div>
+              )}
+
               <div className="flex items-start justify-between gap-4">
-                <dt className="text-sm text-gray-500 dark:text-gray-400">
+                <dt className="text-sm font-medium text-gray-600 dark:text-gray-400">
                   Reference
                 </dt>
-                <dd className="flex min-w-0 items-center gap-2 text-right text-sm font-semibold text-gray-900 dark:text-gray-100">
-                  <span className="truncate">{reference || "Pending"}</span>
-                  {reference ? (
+                <dd className="flex min-w-0 items-center gap-2 text-right">
+                  <span className="truncate text-sm font-mono font-semibold text-gray-900 dark:text-gray-100">
+                    {reference || "—"}
+                  </span>
+                  {reference && (
                     <button
                       type="button"
                       onClick={copyReference}
-                      className="shrink-0 rounded-lg p-2 text-gray-500 transition hover:bg-white hover:text-[#57370D] dark:hover:bg-gray-900 dark:hover:text-[#E8B26A]"
+                      className="shrink-0 rounded-lg p-1.5 text-gray-500 transition hover:bg-white hover:text-[#57370D] dark:hover:bg-gray-900 dark:hover:text-[#E8B26A]"
                       aria-label="Copy payment reference"
+                      title="Copy reference"
                     >
                       <CopyIcon className="h-4 w-4" />
                     </button>
-                  ) : null}
+                  )}
                 </dd>
               </div>
-              <div className="flex items-start justify-between gap-4">
-                <dt className="text-sm text-gray-500 dark:text-gray-400">
-                  Transaction
-                </dt>
-                <dd className="max-w-52 truncate text-right text-sm font-semibold text-gray-900 dark:text-gray-100">
-                  {transactionId || "Awaiting provider"}
-                </dd>
-              </div>
+
+              {transactionId && (
+                <div className="flex items-start justify-between gap-4">
+                  <dt className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                    Transaction ID
+                  </dt>
+                  <dd className="max-w-48 truncate text-right text-sm font-mono font-semibold text-gray-900 dark:text-gray-100">
+                    {transactionId}
+                  </dd>
+                </div>
+              )}
             </dl>
 
             <div className="mt-6 flex items-start gap-3 rounded-xl bg-white p-4 text-sm text-gray-600 dark:bg-[#101010] dark:text-gray-300">
@@ -304,11 +435,11 @@ export function PaymentCallbackClient() {
               </p>
             </div>
 
-            {copied ? (
-              <p className="mt-4 text-sm font-semibold text-emerald-700 dark:text-emerald-300">
-                Reference copied.
+            {copied && (
+              <p className="mt-4 text-center text-sm font-semibold text-emerald-700 dark:text-emerald-300 animate-in fade-in duration-300">
+                ✓ Reference copied
               </p>
-            ) : null}
+            )}
           </div>
         </div>
       </section>
