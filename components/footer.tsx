@@ -8,11 +8,13 @@ const footerLinks = {
     { href: "/about", label: "About Us" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/faq", label: "FAQ" },
+    { href: "/support", label: "Support" },
     { href: "/contact", label: "Contact" },
   ],
   legal: [
-    { href: "/privacy", label: "Privacy Policy" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
     { href: "/terms", label: "Terms of Service" },
+    { href: "/account-deletion", label: "Account Deletion" },
   ],
   social: [
     {

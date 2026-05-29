@@ -4,7 +4,7 @@
     "details": [
       {
         "appIDs": [
-          "REPLACE_WITH_TEAM_ID.com.example.sharedDrive"
+          "REPLACE_WITH_APPLE_TEAM_ID.com.maoltech.sharedrive"
         ],
         "components": [
           {

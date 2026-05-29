@@ -23,7 +23,7 @@ export default function TermsPage() {
             transition={{ delay: 0.1 }}
             className="text-gray-600 dark:text-gray-400"
           >
-            Last updated: {new Date().toLocaleDateString("en-NG", { month: "long", day: "numeric", year: "numeric" })}
+            Last updated: May 29, 2026
           </motion.p>
         </div>
       </section>
