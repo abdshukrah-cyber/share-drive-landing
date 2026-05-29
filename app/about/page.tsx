@@ -299,17 +299,17 @@ const values = [
 
 const team = [
   {
-    name: "Abdulrahman Shukrah",
+    name: "Olagunju Mujeeb",
     role: "Founder & CEO",
     bio: "Lagos native passionate about solving urban mobility challenges through technology.",
   },
   {
-    name: "Coming Soon",
+    name: "Olagunju Mujeeb",
     role: "CTO",
     bio: "Building the technology that will power the future of carpooling in Nigeria.",
   },
   {
-    name: "Coming Soon",
+    name: "Abdulrahman Shukrah",
     role: "Head of Operations",
     bio: "Ensuring every ride is safe, reliable, and enjoyable for our users.",
   },
