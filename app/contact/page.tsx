@@ -29,12 +29,20 @@ export default function ContactPage() {
       return;
     }
 
-    setIsSubmitting(true);
+    // Open the visitor's email app with the message addressed to admin@sharedrive.ng
+    const subjectLabels: Record<string, string> = {
+      general: "General Inquiry",
+      partnership: "Partnership Opportunity",
+      investment: "Investment Inquiry",
+      press: "Press & Media",
+      support: "Support",
+      feedback: "Feedback",
+      other: "Other",
+    };
+    const subject = `ShareDrive - ${subjectLabels[formData.subject] ?? "Contact"} from ${formData.name}`;
+    const body = `${formData.message}\n\n---\nName: ${formData.name}\nEmail: ${formData.email}`;
+    window.location.href = `mailto:admin@sharedrive.ng?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Simulate API call - replace with actual API endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
     setIsSubmitted(true);
   };
 
@@ -251,11 +259,18 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold text-2xl text-green-800 dark:text-green-200 mb-2">
-                  Message Sent!
+                  Almost done!
                 </h3>
                 <p className="text-green-700 dark:text-green-300 mb-6">
-                  Thank you for reaching out. We&apos;ll get back to you within
-                  24 hours.
+                  Your email app should open with your message ready. Just hit
+                  send. If it didn&apos;t open, email us directly at{" "}
+                  <a
+                    href="mailto:admin@sharedrive.ng"
+                    className="font-semibold underline"
+                  >
+                    admin@sharedrive.ng
+                  </a>
+                  . We&apos;ll get back to you within 24 hours.
                 </p>
                 <button
                   onClick={() => {
@@ -333,6 +348,7 @@ export default function ContactPage() {
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
                     <option value="partnership">Partnership Opportunity</option>
+                    <option value="investment">Investment Inquiry</option>
                     <option value="press">Press & Media</option>
                     <option value="support">Support</option>
                     <option value="feedback">Feedback</option>

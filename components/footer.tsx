@@ -8,6 +8,7 @@ const footerLinks = {
     { href: "/about", label: "About Us" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/faq", label: "FAQ" },
+    { href: "/investors", label: "Investors" },
     { href: "/support", label: "Support" },
     { href: "/contact", label: "Contact" },
   ],

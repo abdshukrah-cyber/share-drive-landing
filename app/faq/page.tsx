@@ -185,9 +185,9 @@ const faqs: Record<FAQCategory, { question: string; answer: string }[]> = {
         "ShareDrive is a carpooling platform designed specifically for Lagos, Nigeria. We connect drivers heading to work or other destinations with riders going the same way, helping everyone save on fuel costs while reducing traffic congestion.",
     },
     {
-      question: "When will ShareDrive launch?",
+      question: "Is ShareDrive live?",
       answer:
-        "We're currently in development and plan to launch soon. Join our waitlist to be the first to know when we go live and get early access to the app.",
+        "Yes! ShareDrive is live now. You can sign up and start sharing rides today on our web app at app.sharedrive.ng. Our Android app is coming very soon, and the iOS app is coming soon.",
     },
     {
       question: "Is ShareDrive available outside Lagos?",
@@ -200,9 +200,9 @@ const faqs: Record<FAQCategory, { question: string; answer: string }[]> = {
         "Unlike ride-hailing services where you pay for a dedicated car and driver, ShareDrive is for carpooling - sharing rides with people already heading your way. This makes it more affordable for riders and helps drivers offset their fuel costs rather than work as professional drivers.",
     },
     {
-      question: "Do I need a smartphone to use ShareDrive?",
+      question: "How do I access ShareDrive?",
       answer:
-        "Yes, ShareDrive is a mobile app available for both Android and iOS devices. You'll need a smartphone to create an account, find rides, and communicate with other users.",
+        "ShareDrive is available now as a web app at app.sharedrive.ng, which works in the browser on any phone or computer. Our Android app is coming very soon to Google Play, and the iOS app is coming soon to the App Store.",
     },
   ],
   riders: [
@@ -300,7 +300,7 @@ const faqs: Record<FAQCategory, { question: string; answer: string }[]> = {
     {
       question: "What fees does ShareDrive charge?",
       answer:
-        "ShareDrive charges a small service fee to cover platform operations, payment processing, and user support. The exact fee structure will be announced before launch.",
+        "ShareDrive charges a small service fee to cover platform operations, payment processing, and user support. You'll always see the full price, including fees, before you confirm a ride.",
     },
     {
       question: "Can I pay with cash?",

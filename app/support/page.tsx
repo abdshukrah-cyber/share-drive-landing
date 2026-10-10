@@ -53,12 +53,21 @@ export default function SupportPage() {
               <p className="mb-6 text-sm leading-6 text-gray-600 dark:text-gray-400">
                 {option.description}
               </p>
-              <Link
-                href={option.href}
-                className="inline-flex rounded-xl bg-[#57370D] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#3d2609]"
-              >
-                {option.label}
-              </Link>
+              {option.href.startsWith("mailto:") ? (
+                <a
+                  href={option.href}
+                  className="inline-flex rounded-xl bg-[#57370D] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#3d2609]"
+                >
+                  {option.label}
+                </a>
+              ) : (
+                <Link
+                  href={option.href}
+                  className="inline-flex rounded-xl bg-[#57370D] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#3d2609]"
+                >
+                  {option.label}
+                </Link>
+              )}
             </div>
           ))}
         </div>
@@ -76,6 +85,15 @@ export default function SupportPage() {
               >
                 admin@sharedrive.ng
               </a>
+            </p>
+            <p>
+              Investors:{" "}
+              <Link
+                href="/investors"
+                className="font-semibold text-[#57370D] dark:text-[#E8B26A]"
+              >
+                see our investor page
+              </Link>
             </p>
             <p>Location: Lagos, Nigeria</p>
             <p>Typical response time: within 24 hours on business days.</p>

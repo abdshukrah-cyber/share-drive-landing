@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { WaitlistForm } from "@/components/waitlist-form";
+import { GetApp } from "@/components/get-app";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#57370D] dark:bg-[#E8B26A] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#57370D] dark:bg-[#E8B26A]"></span>
               </span>
-              Coming Soon - Join the Waitlist
+              Now Live - Ride with ShareDrive Today
             </motion.div>
 
             <motion.h1
@@ -52,9 +52,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              id="waitlist"
+              id="get-app"
             >
-              <WaitlistForm variant="hero" />
+              <GetApp variant="hero" />
             </motion.div>
           </div>
 
@@ -117,8 +117,8 @@ export default function Home() {
               Why Choose ShareDrive?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              We&apos;re building the most trusted carpooling platform for
-              Lagos. Here&apos;s what makes us different.
+              The most trusted carpooling platform for Lagos. Here&apos;s what
+              makes us different.
             </p>
           </motion.div>
 
@@ -264,11 +264,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-[#57370D] dark:text-[#E8B26A]">
-              What Early Users Say
+              What Our Users Say
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Hear from Lagosians who are excited about changing their daily
-              commute.
+              Hear from Lagosians who are changing how they commute.
             </p>
           </motion.div>
 
@@ -328,10 +327,10 @@ export default function Home() {
             Ready to change how you commute?
           </h2>
           <p className="text-white/80 text-xl mb-10 max-w-2xl mx-auto">
-            Join thousands of Lagosians waiting for ShareDrive. Be the first to
-            know when we launch.
+            ShareDrive is live. Open the web app and find your first shared
+            ride today &mdash; our mobile apps are on the way.
           </p>
-          <WaitlistForm variant="compact" className="max-w-lg mx-auto" />
+          <GetApp variant="onDark" className="max-w-lg mx-auto" />
         </motion.div>
       </section>
     </main>
@@ -339,7 +338,7 @@ export default function Home() {
 }
 
 const stats = [
-  { value: "10K+", label: "Waitlist Signups" },
+  { value: "10K+", label: "Lagosians Onboard" },
   { value: "50%", label: "Avg. Cost Savings" },
   { value: "30min", label: "Avg. Time Saved" },
   { value: "100+", label: "Routes Covered" },
@@ -442,18 +441,18 @@ const testimonials = [
     name: "Adaobi Okonkwo",
     role: "Marketing Manager, Victoria Island",
     quote:
-      "I spend over 3 hours daily in Lagos traffic. ShareDrive is exactly what we need - finally, a solution built for Lagosians by Lagosians!",
+      "I used to spend over 3 hours daily in Lagos traffic. ShareDrive is exactly what we needed - finally, a solution built for Lagosians by Lagosians!",
   },
   {
     name: "Emeka Nwosu",
     role: "Software Developer, Lekki",
     quote:
-      "The concept is brilliant. Sharing rides with verified professionals going my route? Sign me up! Can't wait for the launch.",
+      "Sharing rides with verified professionals going my route is brilliant. Signing up on the web app took me just a few minutes.",
   },
   {
     name: "Funke Adeyemi",
     role: "Bank Executive, Ikeja",
     quote:
-      "Fuel prices are crazy right now. The idea of splitting costs while also reducing my carbon footprint is a win-win. Excited for ShareDrive!",
+      "Fuel prices are crazy right now. Splitting costs while also reducing my carbon footprint is a win-win. ShareDrive just makes sense!",
   },
 ];

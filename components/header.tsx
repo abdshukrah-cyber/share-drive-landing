@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { WEB_APP_URL } from "@/components/get-app";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/how-it-works", label: "How It Works" },
   { href: "/faq", label: "FAQ" },
+  { href: "/investors", label: "Investors" },
   { href: "/support", label: "Support" },
   { href: "/contact", label: "Contact" },
 ];
@@ -70,7 +72,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -84,6 +86,15 @@ export function Header() {
 
           {/* Right side buttons */}
           <div className="flex items-center gap-3">
+            <a
+              href={WEB_APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-block bg-[#57370D] hover:bg-[#3d2609] text-white px-5 py-2 rounded-xl font-bold transition-colors"
+            >
+              Open Web App
+            </a>
+
             {/* Theme toggle */}
             <button
               onClick={() => setIsDark(!isDark)}
@@ -112,7 +123,7 @@ export function Header() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              className="lg:hidden p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -157,7 +168,7 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
               onClick={() => setIsMenuOpen(false)}
             />
             <motion.div
@@ -165,7 +176,7 @@ export function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-[#0f0f0f] z-50 shadow-2xl md:hidden"
+              className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-[#0f0f0f] z-50 shadow-2xl lg:hidden"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-8">
@@ -204,13 +215,15 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-8">
-                  <Link
-                    href="/#waitlist"
+                  <a
+                    href={WEB_APP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
                     className="block w-full bg-[#57370D] hover:bg-[#3d2609] text-white text-center px-6 py-3 rounded-xl font-bold transition-colors"
                   >
-                    Join Waitlist
-                  </Link>
+                    Open Web App
+                  </a>
                 </div>
               </div>
             </motion.div>

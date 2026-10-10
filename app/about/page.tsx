@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -259,15 +258,18 @@ export default function AboutPage() {
             Join Us on This Journey
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            Be part of the movement that&apos;s changing how Lagos moves. Sign up
-            for early access and be the first to experience ShareDrive.
+            Be part of the movement that&apos;s changing how Lagos moves.
+            ShareDrive is live on the web today, with our Android and iOS apps
+            coming soon.
           </p>
-          <Link
-            href="/#waitlist"
+          <a
+            href="https://app.sharedrive.ng"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#57370D] hover:bg-[#3d2609] text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
           >
-            Join the Waitlist
-          </Link>
+            Open the Web App
+          </a>
         </motion.div>
       </section>
     </main>

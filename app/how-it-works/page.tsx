@@ -364,16 +364,18 @@ export default function HowItWorksPage() {
             Ready to Get Started?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            Join the waitlist today and be among the first to experience
-            smarter commuting in Lagos.
+            ShareDrive is live. Sign up on the web app and start enjoying
+            smarter commuting in Lagos today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/#waitlist"
+            <a
+              href="https://app.sharedrive.ng"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#57370D] hover:bg-[#3d2609] text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
             >
-              Join the Waitlist
-            </Link>
+              Open the Web App
+            </a>
             <Link
               href="/faq"
               className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-bold transition-all"
