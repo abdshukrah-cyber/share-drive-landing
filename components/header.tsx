@@ -66,7 +66,7 @@ export function Header() {
               height={40}
               className="rounded-lg"
             />
-            <span className="font-bold text-2xl tracking-tighter text-(--brand-text) dark:text-[#E8B26A]">
+            <span className="font-bold text-2xl tracking-tighter text-[#57370D] dark:text-[#E8B26A]">
               ShareDrive
             </span>
           </Link>
@@ -77,7 +77,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors font-medium"
+                className="text-gray-600 dark:text-gray-300 hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors font-medium"
               >
                 {link.label}
               </Link>
@@ -90,7 +90,7 @@ export function Header() {
               href={WEB_APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:inline-block bg-(--brand) hover:bg-(--brand-hover) text-(--on-brand) px-5 py-2 rounded-xl font-bold transition-colors"
+              className="hidden lg:inline-block bg-[#57370D] hover:bg-[#3d2609] text-white px-5 py-2 rounded-xl font-bold transition-colors"
             >
               Open Web App
             </a>
@@ -180,7 +180,7 @@ export function Header() {
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-8">
-                  <span className="font-bold text-xl text-(--brand-text) dark:text-[#E8B26A]">
+                  <span className="font-bold text-xl text-[#57370D] dark:text-[#E8B26A]">
                     Menu
                   </span>
                   <button
@@ -208,7 +208,7 @@ export function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-lg text-gray-700 dark:text-gray-200 hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
+                      className="text-lg text-gray-700 dark:text-gray-200 hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors py-2 border-b border-gray-100 dark:border-gray-800"
                     >
                       {link.label}
                     </Link>
@@ -220,7 +220,7 @@ export function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMenuOpen(false)}
-                    className="block w-full bg-(--brand) hover:bg-(--brand-hover) text-(--on-brand) text-center px-6 py-3 rounded-xl font-bold transition-colors"
+                    className="block w-full bg-[#57370D] hover:bg-[#3d2609] text-white text-center px-6 py-3 rounded-xl font-bold transition-colors"
                   >
                     Open Web App
                   </a>

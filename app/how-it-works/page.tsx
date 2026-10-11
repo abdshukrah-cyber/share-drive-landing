@@ -12,7 +12,7 @@ export default function HowItWorksPage() {
     <main className="bg-white dark:bg-[#0f0f0f] text-gray-900 dark:text-gray-100 min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-(--brand)/5 dark:bg-transparent -z-10" />
+        <div className="absolute inset-0 bg-[#57370D]/5 dark:bg-transparent -z-10" />
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ export default function HowItWorksPage() {
             className="text-4xl md:text-6xl font-extrabold mb-6 text-balance"
           >
             How{" "}
-            <span className="text-(--brand-text) dark:text-[#E8B26A]">
+            <span className="text-[#57370D] dark:text-[#E8B26A]">
               ShareDrive
             </span>{" "}
             Works
@@ -45,7 +45,7 @@ export default function HowItWorksPage() {
               onClick={() => setActiveTab("rider")}
               className={`flex-1 py-3 px-6 rounded-xl font-bold transition-all ${
                 activeTab === "rider"
-                  ? "bg-(--brand) text-(--on-brand)"
+                  ? "bg-[#57370D] text-white"
                   : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               }`}
             >
@@ -55,7 +55,7 @@ export default function HowItWorksPage() {
               onClick={() => setActiveTab("driver")}
               className={`flex-1 py-3 px-6 rounded-xl font-bold transition-all ${
                 activeTab === "driver"
-                  ? "bg-(--brand) text-(--on-brand)"
+                  ? "bg-[#57370D] text-white"
                   : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
               }`}
             >
@@ -87,7 +87,7 @@ export default function HowItWorksPage() {
                 >
                   <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="w-12 h-12 bg-(--brand) text-(--on-brand) rounded-2xl flex items-center justify-center text-xl font-bold">
+                      <span className="w-12 h-12 bg-[#57370D] text-white rounded-2xl flex items-center justify-center text-xl font-bold">
                         {i + 1}
                       </span>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -104,7 +104,7 @@ export default function HowItWorksPage() {
                           className="flex items-start gap-2 text-gray-600 dark:text-gray-400"
                         >
                           <svg
-                            className="w-5 h-5 text-(--brand-text) dark:text-[#E8B26A] mt-0.5 shrink-0"
+                            className="w-5 h-5 text-[#57370D] dark:text-[#E8B26A] mt-0.5 shrink-0"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ export default function HowItWorksPage() {
                       i % 2 === 1 ? "lg:order-1" : ""
                     } bg-gray-50 dark:bg-[#1e1e1e] rounded-3xl p-8 flex items-center justify-center`}
                   >
-                    <div className="text-(--brand-text) dark:text-[#E8B26A]">
+                    <div className="text-[#57370D] dark:text-[#E8B26A]">
                       {step.icon}
                     </div>
                   </div>
@@ -159,7 +159,7 @@ export default function HowItWorksPage() {
                 >
                   <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="w-12 h-12 bg-(--brand) text-(--on-brand) rounded-2xl flex items-center justify-center text-xl font-bold">
+                      <span className="w-12 h-12 bg-[#57370D] text-white rounded-2xl flex items-center justify-center text-xl font-bold">
                         {i + 1}
                       </span>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -176,7 +176,7 @@ export default function HowItWorksPage() {
                           className="flex items-start gap-2 text-gray-600 dark:text-gray-400"
                         >
                           <svg
-                            className="w-5 h-5 text-(--brand-text) dark:text-[#E8B26A] mt-0.5 shrink-0"
+                            className="w-5 h-5 text-[#57370D] dark:text-[#E8B26A] mt-0.5 shrink-0"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -198,7 +198,7 @@ export default function HowItWorksPage() {
                       i % 2 === 1 ? "lg:order-1" : ""
                     } bg-gray-50 dark:bg-[#1e1e1e] rounded-3xl p-8 flex items-center justify-center`}
                   >
-                    <div className="text-(--brand-text) dark:text-[#E8B26A]">
+                    <div className="text-[#57370D] dark:text-[#E8B26A]">
                       {step.icon}
                     </div>
                   </div>
@@ -218,7 +218,7 @@ export default function HowItWorksPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-(--brand-text) dark:text-[#E8B26A]">
+            <h2 className="text-3xl font-bold mb-4 text-[#57370D] dark:text-[#E8B26A]">
               Your Safety is Our Priority
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -237,8 +237,8 @@ export default function HowItWorksPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white dark:bg-[#1e1e1e] p-6 rounded-2xl border border-gray-100 dark:border-gray-800"
               >
-                <div className="w-12 h-12 bg-(--brand)/10 dark:bg-[#E8B26A]/20 rounded-xl flex items-center justify-center mb-4">
-                  <div className="text-(--brand-text) dark:text-[#E8B26A]">
+                <div className="w-12 h-12 bg-[#57370D]/10 dark:bg-[#E8B26A]/20 rounded-xl flex items-center justify-center mb-4">
+                  <div className="text-[#57370D] dark:text-[#E8B26A]">
                     {feature.icon}
                   </div>
                 </div>
@@ -272,9 +272,9 @@ export default function HowItWorksPage() {
             </p>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-(--brand)/10 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#57370D]/10 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-(--brand-text) dark:text-[#E8B26A]"
+                    className="w-5 h-5 text-[#57370D] dark:text-[#E8B26A]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -292,9 +292,9 @@ export default function HowItWorksPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-(--brand)/10 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#57370D]/10 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-(--brand-text) dark:text-[#E8B26A]"
+                    className="w-5 h-5 text-[#57370D] dark:text-[#E8B26A]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -312,9 +312,9 @@ export default function HowItWorksPage() {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-(--brand)/10 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-[#57370D]/10 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-(--brand-text) dark:text-[#E8B26A]"
+                    className="w-5 h-5 text-[#57370D] dark:text-[#E8B26A]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -372,7 +372,7 @@ export default function HowItWorksPage() {
               href="https://app.sharedrive.ng"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-(--brand) hover:bg-(--brand-hover) text-(--on-brand) px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
+              className="bg-[#57370D] hover:bg-[#3d2609] text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
             >
               Open the Web App
             </a>

@@ -29,7 +29,7 @@ export default function SupportPage() {
     <main className="min-h-screen bg-white pt-24 text-gray-900 dark:bg-[#0f0f0f] dark:text-gray-100">
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-(--brand-text) dark:text-[#E8B26A]">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#57370D] dark:text-[#E8B26A]">
             ShareDrive support
           </p>
           <h1 className="mb-5 text-4xl font-extrabold md:text-5xl">
@@ -56,14 +56,14 @@ export default function SupportPage() {
               {option.href.startsWith("mailto:") ? (
                 <a
                   href={option.href}
-                  className="inline-flex rounded-xl bg-(--brand) px-5 py-3 text-sm font-bold text-(--on-brand) transition-colors hover:bg-(--brand-hover)"
+                  className="inline-flex rounded-xl bg-[#57370D] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#3d2609]"
                 >
                   {option.label}
                 </a>
               ) : (
                 <Link
                   href={option.href}
-                  className="inline-flex rounded-xl bg-(--brand) px-5 py-3 text-sm font-bold text-(--on-brand) transition-colors hover:bg-(--brand-hover)"
+                  className="inline-flex rounded-xl bg-[#57370D] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#3d2609]"
                 >
                   {option.label}
                 </Link>
@@ -81,7 +81,7 @@ export default function SupportPage() {
               Email:{" "}
               <a
                 href="mailto:admin@sharedrive.ng"
-                className="font-semibold text-(--brand-text) dark:text-[#E8B26A]"
+                className="font-semibold text-[#57370D] dark:text-[#E8B26A]"
               >
                 admin@sharedrive.ng
               </a>
@@ -90,7 +90,7 @@ export default function SupportPage() {
               Investors:{" "}
               <Link
                 href="/investors"
-                className="font-semibold text-(--brand-text) dark:text-[#E8B26A]"
+                className="font-semibold text-[#57370D] dark:text-[#E8B26A]"
               >
                 see our investor page
               </Link>

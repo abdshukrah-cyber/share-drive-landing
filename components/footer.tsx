@@ -72,7 +72,7 @@ export function Footer() {
                 height={40}
                 className="rounded-lg"
               />
-              <span className="font-bold text-xl text-(--brand-text) dark:text-[#E8B26A]">
+              <span className="font-bold text-xl text-[#57370D] dark:text-[#E8B26A]">
                 ShareDrive
               </span>
             </Link>
@@ -87,7 +87,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors"
+                  className="text-gray-500 hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -106,7 +106,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors text-sm"
+                    className="text-gray-600 dark:text-gray-400 hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -125,7 +125,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-600 dark:text-gray-400 hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors text-sm"
+                    className="text-gray-600 dark:text-gray-400 hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -142,7 +142,7 @@ export function Footer() {
             <ul className="flex flex-col gap-3 text-sm text-gray-600 dark:text-gray-400">
               <li className="flex items-center gap-2">
                 <svg
-                  className="w-4 h-4 text-(--brand-text) dark:text-[#E8B26A]"
+                  className="w-4 h-4 text-[#57370D] dark:text-[#E8B26A]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -156,14 +156,14 @@ export function Footer() {
                 </svg>
                 <a
                   href="mailto:admin@sharedrive.ng"
-                  className="hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors"
+                  className="hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors"
                 >
                   admin@sharedrive.ng
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <svg
-                  className="w-4 h-4 text-(--brand-text) dark:text-[#E8B26A]"
+                  className="w-4 h-4 text-[#57370D] dark:text-[#E8B26A]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -179,14 +179,14 @@ export function Footer() {
                   href="https://sharedrive.ng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-(--brand-text) dark:hover:text-[#E8B26A] transition-colors"
+                  className="hover:text-[#57370D] dark:hover:text-[#E8B26A] transition-colors"
                 >
                   sharedrive.ng
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <svg
-                  className="w-4 h-4 text-(--brand-text) dark:text-[#E8B26A] mt-0.5"
+                  className="w-4 h-4 text-[#57370D] dark:text-[#E8B26A] mt-0.5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

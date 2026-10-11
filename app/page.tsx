@@ -11,18 +11,18 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="pt-32 pb-20 px-6 relative overflow-hidden">
         {/* Subtle Background Gradient for Light Mode */}
-        <div className="absolute inset-0 bg-(--brand)/5 dark:bg-transparent -z-10" />
+        <div className="absolute inset-0 bg-[#57370D]/5 dark:bg-transparent -z-10" />
 
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 bg-(--brand)/10 dark:bg-[#E8B26A]/10 text-(--brand-text) dark:text-[#E8B26A] px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-[#57370D]/10 dark:bg-[#E8B26A]/10 text-[#57370D] dark:text-[#E8B26A] px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-(--brand) dark:bg-[#E8B26A] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-(--brand) dark:bg-[#E8B26A]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#57370D] dark:bg-[#E8B26A] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#57370D] dark:bg-[#E8B26A]"></span>
               </span>
               Now Live - Ride with ShareDrive Today
             </motion.div>
@@ -33,7 +33,7 @@ export default function Home() {
               className="text-5xl lg:text-7xl font-extrabold mb-6 text-gray-900 dark:text-white text-balance"
             >
               The Smarter Way to{" "}
-              <span className="text-(--brand-text) dark:text-[#E8B26A]">
+              <span className="text-[#57370D] dark:text-[#E8B26A]">
                 Move Lagos
               </span>
             </motion.h1>
@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* STATISTICS SECTION */}
-      <section className="py-16 px-6 bg-[#0f0f0f] dark:bg-(--brand)/20">
+      <section className="py-16 px-6 bg-[#57370D] dark:bg-[#57370D]/20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
@@ -92,7 +92,7 @@ export default function Home() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-extrabold text-[#E8B26A] dark:text-white mb-2">
+                <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-white/80 text-sm md:text-base">
@@ -113,7 +113,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-(--brand-text) dark:text-[#E8B26A]">
+            <h2 className="text-4xl font-bold mb-4 text-[#57370D] dark:text-[#E8B26A]">
               Why Choose ShareDrive?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ export default function Home() {
                 whileHover={{ y: -10 }}
                 className="bg-white dark:bg-[#1e1e1e] p-8 rounded-3xl shadow-lg border border-gray-100 dark:border-gray-800"
               >
-                <div className="text-(--brand-text) dark:text-[#E8B26A] mb-4">
+                <div className="text-[#57370D] dark:text-[#E8B26A] mb-4">
                   {f.icon}
                 </div>
                 <h3 className="font-bold text-xl mb-3 dark:text-white">
@@ -226,7 +226,7 @@ export default function Home() {
             Getting started with ShareDrive is simple.{" "}
             <Link
               href="/how-it-works"
-              className="text-(--brand-text) dark:text-[#E8B26A] hover:underline"
+              className="text-[#57370D] dark:text-[#E8B26A] hover:underline"
             >
               Learn more
             </Link>
@@ -242,7 +242,7 @@ export default function Home() {
               transition={{ delay: i * 0.1 }}
               className="text-center group"
             >
-              <div className="w-16 h-16 bg-(--brand) text-(--on-brand) rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:rotate-12 transition-transform">
+              <div className="w-16 h-16 bg-[#57370D] text-white rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 group-hover:rotate-12 transition-transform">
                 {i + 1}
               </div>
               <h4 className="font-bold mb-2 dark:text-white">{s.title}</h4>
@@ -263,7 +263,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4 text-(--brand-text) dark:text-[#E8B26A]">
+            <h2 className="text-4xl font-bold mb-4 text-[#57370D] dark:text-[#E8B26A]">
               What Our Users Say
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -297,7 +297,7 @@ export default function Home() {
                   &quot;{t.quote}&quot;
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-(--brand)/20 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center text-(--brand-text) dark:text-[#E8B26A] font-bold text-lg">
+                  <div className="w-12 h-12 bg-[#57370D]/20 dark:bg-[#E8B26A]/20 rounded-full flex items-center justify-center text-[#57370D] dark:text-[#E8B26A] font-bold text-lg">
                     {t.name.charAt(0)}
                   </div>
                   <div>
@@ -321,7 +321,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto bg-[#0f0f0f] dark:bg-(--brand)/20 rounded-[3rem] p-12 text-center border border-(--brand-text)/10"
+          className="max-w-4xl mx-auto bg-[#57370D] dark:bg-[#57370D]/20 rounded-[3rem] p-12 text-center border border-[#57370D]/10"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 text-balance">
             Ready to change how you commute?

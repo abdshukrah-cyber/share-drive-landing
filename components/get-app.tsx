@@ -23,8 +23,8 @@ export function GetApp({ variant = "hero", className = "" }: GetAppProps) {
         rel="noopener noreferrer"
         className={`inline-flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 rounded-2xl shadow-xl transition-all transform hover:-translate-y-1 font-bold text-lg ${
           onDark
-            ? "bg-[#E8B26A] text-[#0f0f0f] hover:bg-[#D9A04F] dark:bg-white dark:text-[#57370D] dark:hover:bg-gray-100"
-            : "bg-(--brand) hover:bg-(--brand-hover) text-(--on-brand)"
+            ? "bg-white text-[#57370D] hover:bg-gray-100"
+            : "bg-[#57370D] hover:bg-[#3d2609] text-white"
         }`}
       >
         Open the Web App

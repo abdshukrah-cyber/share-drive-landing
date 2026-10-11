@@ -8,7 +8,7 @@ export default function AboutPage() {
     <main className="bg-white dark:bg-[#0f0f0f] text-gray-900 dark:text-gray-100 min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-(--brand)/5 dark:bg-transparent -z-10" />
+        <div className="absolute inset-0 bg-[#57370D]/5 dark:bg-transparent -z-10" />
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -16,7 +16,7 @@ export default function AboutPage() {
             className="text-4xl md:text-6xl font-extrabold mb-6 text-balance"
           >
             About{" "}
-            <span className="text-(--brand-text) dark:text-[#E8B26A]">
+            <span className="text-[#57370D] dark:text-[#E8B26A]">
               ShareDrive
             </span>
           </motion.h1>
@@ -40,7 +40,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-6 text-(--brand-text) dark:text-[#E8B26A]">
+            <h2 className="text-3xl font-bold mb-6 text-[#57370D] dark:text-[#E8B26A]">
               Our Story
             </h2>
             <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
@@ -88,7 +88,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#0f0f0f] dark:bg-(--brand) text-white p-10 rounded-3xl"
+            className="bg-[#57370D] text-white p-10 rounded-3xl"
           >
             <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
               <svg
@@ -121,9 +121,9 @@ export default function AboutPage() {
             transition={{ delay: 0.1 }}
             className="bg-gray-50 dark:bg-[#1e1e1e] p-10 rounded-3xl border border-gray-100 dark:border-gray-800"
           >
-            <div className="w-14 h-14 bg-(--brand)/10 dark:bg-[#E8B26A]/20 rounded-2xl flex items-center justify-center mb-6">
+            <div className="w-14 h-14 bg-[#57370D]/10 dark:bg-[#E8B26A]/20 rounded-2xl flex items-center justify-center mb-6">
               <svg
-                className="w-7 h-7 text-(--brand-text) dark:text-[#E8B26A]"
+                className="w-7 h-7 text-[#57370D] dark:text-[#E8B26A]"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -164,7 +164,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-4 text-(--brand-text) dark:text-[#E8B26A]">
+            <h2 className="text-3xl font-bold mb-4 text-[#57370D] dark:text-[#E8B26A]">
               Our Values
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -223,8 +223,8 @@ export default function AboutPage() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="w-32 h-32 bg-(--brand)/10 dark:bg-[#E8B26A]/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-(--brand-text) dark:text-[#E8B26A]">
+                <div className="w-32 h-32 bg-[#57370D]/10 dark:bg-[#E8B26A]/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-[#57370D] dark:text-[#E8B26A]">
                     {member.name
                       .split(" ")
                       .map((n) => n[0])
@@ -234,7 +234,7 @@ export default function AboutPage() {
                 <h4 className="font-bold text-lg text-gray-900 dark:text-white">
                   {member.name}
                 </h4>
-                <p className="text-(--brand-text) dark:text-[#E8B26A] text-sm mb-2">
+                <p className="text-[#57370D] dark:text-[#E8B26A] text-sm mb-2">
                   {member.role}
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -266,7 +266,7 @@ export default function AboutPage() {
             href="https://app.sharedrive.ng"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-(--brand) hover:bg-(--brand-hover) text-(--on-brand) px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
+            className="inline-block bg-[#57370D] hover:bg-[#3d2609] text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
           >
             Open the Web App
           </a>
