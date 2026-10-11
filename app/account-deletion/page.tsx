@@ -12,7 +12,7 @@ export default function AccountDeletionPage() {
     <main className="min-h-screen bg-white pt-24 text-gray-900 dark:bg-[#0f0f0f] dark:text-gray-100">
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#57370D] dark:text-[#E8B26A]">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-(--brand-text) dark:text-[#E8B26A]">
             Account deletion
           </p>
           <h1 className="mb-5 text-4xl font-extrabold md:text-5xl">
@@ -33,7 +33,7 @@ export default function AccountDeletionPage() {
             <ol className="space-y-4 text-gray-700 dark:text-gray-300">
               {steps.map((step, index) => (
                 <li key={step} className="flex gap-3">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#57370D] text-sm font-bold text-white">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-(--brand) text-sm font-bold text-(--on-brand)">
                     {index + 1}
                   </span>
                   <span>{step}</span>
@@ -59,7 +59,7 @@ export default function AccountDeletionPage() {
                 To ask about retained records, contact{" "}
                 <a
                   href="mailto:admin@sharedrive.ng"
-                  className="font-semibold text-[#57370D] dark:text-[#E8B26A]"
+                  className="font-semibold text-(--brand-text) dark:text-[#E8B26A]"
                 >
                   admin@sharedrive.ng
                 </a>
@@ -80,7 +80,7 @@ export default function AccountDeletionPage() {
           </div>
           <Link
             href="/support"
-            className="inline-flex rounded-xl bg-[#57370D] px-6 py-3 font-bold text-white transition-colors hover:bg-[#3d2609]"
+            className="inline-flex rounded-xl bg-(--brand) px-6 py-3 font-bold text-(--on-brand) transition-colors hover:bg-(--brand-hover)"
           >
             Contact support
           </Link>

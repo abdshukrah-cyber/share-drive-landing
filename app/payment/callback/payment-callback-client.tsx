@@ -332,7 +332,7 @@ export function PaymentCallbackClient() {
                 type="button"
                 onClick={openApp}
                 disabled={isRedirecting}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#57370D] px-6 py-3 text-base font-bold text-white shadow-lg shadow-[#57370D]/20 transition hover:bg-[#3d2609] focus:outline-none focus:ring-4 focus:ring-[#E8B26A]/40 disabled:opacity-75 disabled:cursor-wait"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-(--brand) px-6 py-3 text-base font-bold text-(--on-brand) shadow-lg shadow-(--brand)/20 transition hover:bg-(--brand-hover) focus:outline-none focus:ring-4 focus:ring-[#E8B26A]/40 disabled:opacity-75 disabled:cursor-wait"
               >
                 {isRedirecting ? (
                   <>
@@ -348,7 +348,7 @@ export function PaymentCallbackClient() {
               </button>
               <Link
                 href="/"
-                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-gray-200 px-6 py-3 text-base font-semibold text-gray-800 transition hover:border-[#57370D]/40 hover:text-[#57370D] dark:border-gray-800 dark:text-gray-200 dark:hover:border-[#E8B26A]/40 dark:hover:text-[#E8B26A]"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-gray-200 px-6 py-3 text-base font-semibold text-gray-800 transition hover:border-(--brand-text)/40 hover:text-(--brand-text) dark:border-gray-800 dark:text-gray-200 dark:hover:border-[#E8B26A]/40 dark:hover:text-[#E8B26A]"
               >
                 Go to website
               </Link>
@@ -358,7 +358,7 @@ export function PaymentCallbackClient() {
           {/* Right side - Payment Summary */}
           <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl shadow-gray-950/5 dark:border-gray-800 dark:bg-[#171717] dark:shadow-black/30 sm:p-8">
             <div className="flex items-center gap-3 border-b border-gray-200 pb-5 dark:border-gray-800">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#57370D] text-white">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-(--brand) text-(--on-brand)">
                 <WalletIcon className="h-6 w-6" />
               </div>
               <div>
@@ -405,7 +405,7 @@ export function PaymentCallbackClient() {
                     <button
                       type="button"
                       onClick={copyReference}
-                      className="shrink-0 rounded-lg p-1.5 text-gray-500 transition hover:bg-white hover:text-[#57370D] dark:hover:bg-gray-900 dark:hover:text-[#E8B26A]"
+                      className="shrink-0 rounded-lg p-1.5 text-gray-500 transition hover:bg-white hover:text-(--brand-text) dark:hover:bg-gray-900 dark:hover:text-[#E8B26A]"
                       aria-label="Copy payment reference"
                       title="Copy reference"
                     >
@@ -428,7 +428,7 @@ export function PaymentCallbackClient() {
             </dl>
 
             <div className="mt-6 flex items-start gap-3 rounded-xl bg-white p-4 text-sm text-gray-600 dark:bg-[#101010] dark:text-gray-300">
-              <ClockIcon className="mt-0.5 h-5 w-5 shrink-0 text-[#57370D] dark:text-[#E8B26A]" />
+              <ClockIcon className="mt-0.5 h-5 w-5 shrink-0 text-(--brand-text) dark:text-[#E8B26A]" />
               <p>
                 Wallet credits are confirmed by secure provider verification.
                 If your balance has not changed yet, refresh in the app shortly.

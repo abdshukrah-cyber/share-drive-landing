@@ -53,14 +53,14 @@ export default function InvestorsPage() {
     <main className="min-h-screen bg-white pt-24 text-gray-900 dark:bg-[#0f0f0f] dark:text-gray-100">
       {/* Hero */}
       <section className="relative overflow-hidden px-6 py-16 md:py-24">
-        <div className="absolute inset-0 -z-10 bg-[#57370D]/5 dark:bg-transparent" />
+        <div className="absolute inset-0 -z-10 bg-(--brand)/5 dark:bg-transparent" />
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#57370D] dark:text-[#E8B26A]">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-(--brand-text) dark:text-[#E8B26A]">
             Investors
           </p>
           <h1 className="mb-6 text-4xl font-extrabold text-balance md:text-6xl">
             Invest in the future of{" "}
-            <span className="text-[#57370D] dark:text-[#E8B26A]">
+            <span className="text-(--brand-text) dark:text-[#E8B26A]">
               moving Lagos
             </span>
           </h1>
@@ -72,7 +72,7 @@ export default function InvestorsPage() {
           </p>
           <a
             href={INVEST_MAILTO}
-            className="inline-block rounded-2xl bg-[#57370D] px-8 py-4 text-lg font-bold text-white shadow-xl transition-all hover:-translate-y-1 hover:bg-[#3d2609]"
+            className="inline-block rounded-2xl bg-(--brand) px-8 py-4 text-lg font-bold text-(--on-brand) shadow-xl transition-all hover:-translate-y-1 hover:bg-(--brand-hover)"
           >
             Contact us about investing
           </a>
@@ -80,7 +80,7 @@ export default function InvestorsPage() {
             Or email{" "}
             <a
               href="mailto:admin@sharedrive.ng"
-              className="font-semibold text-[#57370D] underline underline-offset-2 dark:text-[#E8B26A]"
+              className="font-semibold text-(--brand-text) underline underline-offset-2 dark:text-[#E8B26A]"
             >
               admin@sharedrive.ng
             </a>
@@ -92,7 +92,7 @@ export default function InvestorsPage() {
       <section className="bg-gray-50 px-6 py-20 dark:bg-[#121212]">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-[#57370D] md:text-4xl dark:text-[#E8B26A]">
+            <h2 className="mb-4 text-3xl font-bold text-(--brand-text) md:text-4xl dark:text-[#E8B26A]">
               Why ShareDrive
             </h2>
             <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
@@ -131,7 +131,7 @@ export default function InvestorsPage() {
           <div className="grid gap-8 md:grid-cols-3">
             {steps.map((step, i) => (
               <div key={step.title} className="text-center">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#57370D] text-2xl font-bold text-white">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-(--brand) text-2xl font-bold text-(--on-brand)">
                   {i + 1}
                 </div>
                 <h3 className="mb-2 font-bold dark:text-white">{step.title}</h3>
@@ -146,7 +146,7 @@ export default function InvestorsPage() {
 
       {/* CTA */}
       <section className="px-6 pb-20">
-        <div className="mx-auto max-w-4xl rounded-[3rem] border border-[#57370D]/10 bg-[#57370D] p-10 text-center md:p-12 dark:bg-[#57370D]/20">
+        <div className="mx-auto max-w-4xl rounded-[3rem] border border-(--brand-text)/10 bg-[#0f0f0f] p-10 text-center md:p-12 dark:bg-(--brand)/20">
           <h2 className="mb-6 text-3xl font-extrabold text-white text-balance md:text-4xl">
             Ready to start the conversation?
           </h2>
@@ -156,7 +156,7 @@ export default function InvestorsPage() {
           </p>
           <a
             href={INVEST_MAILTO}
-            className="inline-block rounded-2xl bg-white px-8 py-4 text-lg font-bold text-[#57370D] shadow-xl transition-all hover:-translate-y-1 hover:bg-gray-100"
+            className="inline-block rounded-2xl bg-[#E8B26A] px-8 py-4 text-lg font-bold text-[#0f0f0f] shadow-xl transition-all hover:-translate-y-1 hover:bg-[#D9A04F] dark:bg-white dark:text-[#57370D] dark:hover:bg-gray-100"
           >
             Email admin@sharedrive.ng
           </a>

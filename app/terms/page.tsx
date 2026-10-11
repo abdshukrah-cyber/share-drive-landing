@@ -8,7 +8,7 @@ export default function TermsPage() {
     <main className="bg-white dark:bg-[#0f0f0f] text-gray-900 dark:text-gray-100 min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-16 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#57370D]/5 dark:bg-transparent -z-10" />
+        <div className="absolute inset-0 bg-(--brand)/5 dark:bg-transparent -z-10" />
         <div className="max-w-4xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function TermsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="max-w-4xl mx-auto prose prose-lg dark:prose-invert prose-headings:text-[#57370D] dark:prose-headings:text-[#E8B26A]"
+          className="max-w-4xl mx-auto prose prose-lg dark:prose-invert prose-headings:text-(--brand-text) dark:prose-headings:text-[#E8B26A]"
         >
           <div className="bg-gray-50 dark:bg-[#1e1e1e] rounded-2xl p-6 mb-8 border border-gray-100 dark:border-gray-800">
             <p className="text-sm text-gray-600 dark:text-gray-400 m-0">
@@ -257,19 +257,19 @@ export default function TermsPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/privacy"
-              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-medium hover:border-[#57370D] dark:hover:border-[#E8B26A] transition-colors"
+              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-medium hover:border-(--brand-text) dark:hover:border-[#E8B26A] transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/faq"
-              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-medium hover:border-[#57370D] dark:hover:border-[#E8B26A] transition-colors"
+              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-medium hover:border-(--brand-text) dark:hover:border-[#E8B26A] transition-colors"
             >
               FAQ
             </Link>
             <Link
               href="/contact"
-              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-medium hover:border-[#57370D] dark:hover:border-[#E8B26A] transition-colors"
+              className="bg-white dark:bg-[#1e1e1e] border border-gray-200 dark:border-gray-700 px-6 py-3 rounded-xl font-medium hover:border-(--brand-text) dark:hover:border-[#E8B26A] transition-colors"
             >
               Contact Us
             </Link>

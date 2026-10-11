@@ -7,12 +7,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Brand: yellow fills with black text; darker gold for accent text on white */
+  --brand: #E8B26A;
+  --brand-hover: #D9A04F;
+  --on-brand: #0f0f0f;
+  --brand-text: #9A6B12;
 }
 
 /* DARK MODE (controlled by .dark class) */
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --brand: #57370D;
+  --brand-hover: #3d2609;
+  --on-brand: #ffffff;
+  --brand-text: #E8B26A;
 }
 
 /* Apply globally */

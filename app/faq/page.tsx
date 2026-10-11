@@ -22,7 +22,7 @@ export default function FAQPage() {
     <main className="bg-white dark:bg-[#0f0f0f] text-gray-900 dark:text-gray-100 min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#57370D]/5 dark:bg-transparent -z-10" />
+        <div className="absolute inset-0 bg-(--brand)/5 dark:bg-transparent -z-10" />
         <div className="max-w-4xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function FAQPage() {
             className="text-4xl md:text-6xl font-extrabold mb-6"
           >
             Frequently Asked{" "}
-            <span className="text-[#57370D] dark:text-[#E8B26A]">
+            <span className="text-(--brand-text) dark:text-[#E8B26A]">
               Questions
             </span>
           </motion.h1>
@@ -44,7 +44,7 @@ export default function FAQPage() {
             answer you&apos;re looking for?{" "}
             <Link
               href="/contact"
-              className="text-[#57370D] dark:text-[#E8B26A] hover:underline"
+              className="text-(--brand-text) dark:text-[#E8B26A] hover:underline"
             >
               Contact our team
             </Link>
@@ -66,7 +66,7 @@ export default function FAQPage() {
                 }}
                 className={`px-5 py-2.5 rounded-full font-medium transition-all ${
                   activeCategory === cat.id
-                    ? "bg-[#57370D] text-white"
+                    ? "bg-(--brand) text-(--on-brand)"
                     : "bg-gray-100 dark:bg-[#1e1e1e] text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
@@ -99,7 +99,7 @@ export default function FAQPage() {
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-5 h-5 text-[#57370D] dark:text-[#E8B26A] shrink-0 transition-transform ${
+                    className={`w-5 h-5 text-(--brand-text) dark:text-[#E8B26A] shrink-0 transition-transform ${
                       openItems.includes(i) ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -152,7 +152,7 @@ export default function FAQPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-[#57370D] hover:bg-[#3d2609] text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
+              className="bg-(--brand) hover:bg-(--brand-hover) text-(--on-brand) px-8 py-4 rounded-2xl font-bold transition-all transform hover:-translate-y-1"
             >
               Contact Us
             </Link>
