@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { sendPublicMail } from "@/lib/publicMail";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -29,7 +30,6 @@ export default function ContactPage() {
       return;
     }
 
-    // Open the visitor's email app with the message addressed to admin@sharedrive.ng
     const subjectLabels: Record<string, string> = {
       general: "General Inquiry",
       partnership: "Partnership Opportunity",
@@ -39,11 +39,26 @@ export default function ContactPage() {
       feedback: "Feedback",
       other: "Other",
     };
-    const subject = `ShareDrive - ${subjectLabels[formData.subject] ?? "Contact"} from ${formData.name}`;
-    const body = `${formData.message}\n\n---\nName: ${formData.name}\nEmail: ${formData.email}`;
-    window.location.href = `mailto:admin@sharedrive.ng?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const topic = subjectLabels[formData.subject] ?? "Contact";
 
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    try {
+      await sendPublicMail({
+        type: formData.subject === "support" ? "support" : "contact",
+        subject: `${topic} from ${formData.name}`,
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        metadata: { topic, page: window.location.href },
+      });
+      setIsSubmitted(true);
+    } catch (err) {
+      setError(
+        `${err instanceof Error ? err.message : "Unable to send your message."} You can also email admin@naijup.ng.`
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -259,18 +274,11 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold text-2xl text-green-800 dark:text-green-200 mb-2">
-                  Almost done!
+                  Message sent!
                 </h3>
                 <p className="text-green-700 dark:text-green-300 mb-6">
-                  Your email app should open with your message ready. Just hit
-                  send. If it didn&apos;t open, email us directly at{" "}
-                  <a
-                    href="mailto:admin@sharedrive.ng"
-                    className="font-semibold underline"
-                  >
-                    admin@sharedrive.ng
-                  </a>
-                  . We&apos;ll get back to you within 24 hours.
+                  Thanks for reaching out. We&apos;ll get back to you within 24
+                  hours.
                 </p>
                 <button
                   onClick={() => {
