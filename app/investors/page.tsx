@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Invest in ShareDrive",
   description:
     "ShareDrive is building the trusted carpooling network for Lagos. Learn about the opportunity and contact us about funding and investment.",
-};
+  path: "/investors",
+});
 
 const INVEST_MAILTO =
   "mailto:admin@sharedrive.ng?subject=" +

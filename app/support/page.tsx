@@ -1,4 +1,12 @@
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Support",
+  description:
+    "Get help from ShareDrive with app support, safety reports, account issues, payment questions, privacy requests and driver verification.",
+  path: "/support",
+});
 
 const supportOptions = [
   {

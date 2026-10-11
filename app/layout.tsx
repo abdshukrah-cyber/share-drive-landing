@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -27,7 +28,8 @@ export const metadata: Metadata = {
   authors: [{ name: "ShareDrive Nigeria" }],
   creator: "ShareDrive",
   publisher: "ShareDrive Nigeria",
-  metadataBase: new URL("https://sharedrive.ng"),
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_NG",
@@ -36,21 +38,14 @@ export const metadata: Metadata = {
     title: "ShareDrive - The Smarter Way to Move Lagos",
     description:
       "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "ShareDrive - Carpooling in Lagos",
-      },
-    ],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "ShareDrive - The Smarter Way to Move Lagos",
     description:
       "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable.",
-    images: ["/og-image.png"],
+    images: [OG_IMAGE.url],
     creator: "@sharedriveng",
   },
   robots: {
@@ -90,16 +85,49 @@ export const viewport = {
   ],
 };
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}/apple-icon.png`,
+      email: "admin@sharedrive.ng",
+      areaServed: { "@type": "City", name: "Lagos" },
+      sameAs: [
+        "https://twitter.com/sharedriveng",
+        "https://instagram.com/sharedriveng",
+        "https://facebook.com/sharedriveng",
+        "https://linkedin.com/company/sharedriveng",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      inLanguage: "en-NG",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-white dark:bg-[#0f0f0f]">
+    <html lang="en-NG" className="bg-white dark:bg-[#0f0f0f]">
       <body
         className={`${inter.variable} font-sans antialiased bg-white dark:bg-[#0f0f0f] text-gray-900 dark:text-gray-100`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <Header />
         {children}
         <Footer />

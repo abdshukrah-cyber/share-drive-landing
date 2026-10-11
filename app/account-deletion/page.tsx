@@ -1,4 +1,12 @@
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Delete Your Account",
+  description:
+    "How to delete your ShareDrive account and personal data from the app, or by emailing our team if you can't sign in.",
+  path: "/account-deletion",
+});
 
 const steps = [
   "Open the ShareDrive mobile app and sign in.",
