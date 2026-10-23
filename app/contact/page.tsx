@@ -54,7 +54,7 @@ export default function ContactPage() {
       setIsSubmitted(true);
     } catch (err) {
       setError(
-        `${err instanceof Error ? err.message : "Unable to send your message."} You can also email admin@naijup.ng.`
+        `${err instanceof Error ? err.message : "Unable to send your message."} You can also email admin@sharedrive.ng.`
       );
     } finally {
       setIsSubmitting(false);
@@ -102,7 +102,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
               Reach out to us through any of these channels. We typically
-              respond within 24 hours.
+              respond within 24 hours on business days.
             </p>
 
             <div className="flex flex-col gap-6">
@@ -278,7 +278,7 @@ export default function ContactPage() {
                 </h3>
                 <p className="text-green-700 dark:text-green-300 mb-6">
                   Thanks for reaching out. We&apos;ll get back to you within 24
-                  hours.
+                  hours on business days.
                 </p>
                 <button
                   onClick={() => {
@@ -415,7 +415,7 @@ export default function ContactPage() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             Check out our FAQ page for answers to the most common questions
-            about ShareDrive.
+            about SharedDrive.
           </p>
           <Link
             href="/faq"

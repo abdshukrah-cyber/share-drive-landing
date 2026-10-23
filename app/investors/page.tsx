@@ -1,18 +1,18 @@
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Invest in ShareDrive",
+  title: "Invest in SharedDrive",
   description:
-    "ShareDrive is building the trusted carpooling network for Lagos. Learn about the opportunity and contact us about funding and investment.",
+    "SharedDrive is building the trusted carpooling network for Lagos. Learn about the opportunity and contact us about funding and investment.",
   path: "/investors",
 });
 
 const INVEST_MAILTO =
   "mailto:admin@sharedrive.ng?subject=" +
-  encodeURIComponent("Investment Inquiry - ShareDrive") +
+  encodeURIComponent("Investment Inquiry - SharedDrive") +
   "&body=" +
   encodeURIComponent(
-    "Hello ShareDrive team,\n\nI'm interested in learning more about investing in ShareDrive.\n\nName:\nOrganisation / Fund (if any):\nPhone:\nIndicative investment size:\nAnything else we should know:\n\nThank you."
+    "Hello SharedDrive team,\n\nI'm interested in learning more about investing in SharedDrive.\n\nName:\nOrganisation / Fund (if any):\nPhone:\nIndicative investment size:\nAnything else we should know:\n\nThank you."
   );
 
 const opportunity = [
@@ -22,15 +22,15 @@ const opportunity = [
   },
   {
     title: "Empty seats, everywhere",
-    desc: "Most private cars on Lagos roads carry just one person. ShareDrive turns those empty seats into affordable, verified rides.",
+    desc: "Most private cars on Lagos roads carry just one person. SharedDrive turns those empty seats into affordable, verified rides.",
   },
   {
     title: "Built for Lagos",
-    desc: "Verified users, live trip sharing, in-app chat and a secure wallet designed around how Lagosians actually commute.",
+    desc: "Reviewed drivers, live tracking, trip sharing, in-app chat and a secure wallet designed around how Lagosians actually commute.",
   },
   {
     title: "Live and growing",
-    desc: "ShareDrive is live on the web at app.sharedrive.ng, with our Android app coming very soon and iOS to follow.",
+    desc: "SharedDrive is live on the web at app.sharedrive.ng, with our Android app coming very soon and iOS to follow.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function InvestorsPage() {
             </span>
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-            ShareDrive is building the most trusted carpooling network in
+            SharedDrive is building the most trusted carpooling network in
             Nigeria, starting with Lagos. We&apos;re open to conversations with
             investors who share our vision for affordable, safer and greener
             commuting.
@@ -94,7 +94,7 @@ export default function InvestorsPage() {
         <div className="mx-auto max-w-6xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-[#57370D] md:text-4xl dark:text-[#E8B26A]">
-              Why ShareDrive
+              Why SharedDrive
             </h2>
             <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
               A large, everyday problem and a simple, community-powered

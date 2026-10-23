@@ -1,4 +1,4 @@
-// Sends public form submissions through maol_service, which delivers them to admin@naijup.ng.
+// Sends public form submissions through maol_service, which delivers them to admin@sharedrive.ng.
 const MAIL_SERVICE_URL = process.env.NEXT_PUBLIC_MAIL_SERVICE_URL || "";
 const MAIL_API_KEY = process.env.NEXT_PUBLIC_MAIL_API_KEY || "";
 

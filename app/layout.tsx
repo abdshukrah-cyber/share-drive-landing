@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -10,11 +11,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: "ShareDrive - The Smarter Way to Move Lagos",
-    template: "%s | ShareDrive",
+    default: "SharedDrive - The Smarter Way to Move Lagos",
+    template: "%s | SharedDrive",
   },
   description:
-    "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable with ShareDrive.",
+    "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable with SharedDrive.",
   keywords: [
     "carpooling",
     "Lagos",
@@ -25,24 +26,24 @@ export const metadata: Metadata = {
     "save money",
     "fuel",
   ],
-  authors: [{ name: "ShareDrive Nigeria" }],
-  creator: "ShareDrive",
-  publisher: "ShareDrive Nigeria",
+  authors: [{ name: "SharedDrive Nigeria" }],
+  creator: "SharedDrive",
+  publisher: "SharedDrive Nigeria",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_NG",
     url: "https://sharedrive.ng",
-    siteName: "ShareDrive",
-    title: "ShareDrive - The Smarter Way to Move Lagos",
+    siteName: "SharedDrive",
+    title: "SharedDrive - The Smarter Way to Move Lagos",
     description:
       "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ShareDrive - The Smarter Way to Move Lagos",
+    title: "SharedDrive - The Smarter Way to Move Lagos",
     description:
       "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable.",
     images: [OG_IMAGE.url],
@@ -59,6 +60,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
   icons: {
     icon: [
       {
@@ -132,6 +136,20 @@ export default function RootLayout({
         {children}
         <Footer />
         {process.env.NODE_ENV === "production" && <Analytics />}
+
+        {/* Google tag (gtag.js) - shared with maoltech.com and NaijUp */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-933643807"
+          strategy="afterInteractive"
+        />
+        <Script id="google-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-933643807');
+          `}
+        </Script>
       </body>
     </html>
   );

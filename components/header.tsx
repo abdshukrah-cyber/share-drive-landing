@@ -61,13 +61,13 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/image/sharedrive.png"
-              alt="ShareDrive Logo"
+              alt="SharedDrive Logo"
               width={40}
               height={40}
               className="rounded-lg"
             />
             <span className="font-bold text-2xl tracking-tighter text-[#57370D] dark:text-[#E8B26A]">
-              ShareDrive
+              SharedDrive
             </span>
           </Link>
 

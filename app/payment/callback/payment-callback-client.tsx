@@ -155,7 +155,7 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
       eyebrow: "Payment Complete",
       title: "Payment received",
       message:
-        "Your payment is complete. Return to ShareDrive so your wallet can refresh.",
+        "Your payment is complete. Return to SharedDrive so your wallet can refresh.",
       tone: "text-emerald-700 dark:text-emerald-300",
       bg: "bg-emerald-50 dark:bg-emerald-500/10",
       icon: CheckCircleIcon,
@@ -167,7 +167,7 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
       eyebrow: "Payment Failed",
       title: "Payment was not completed",
       message:
-        "You can return to ShareDrive to check your wallet or try funding again.",
+        "You can return to SharedDrive to check your wallet or try funding again.",
       tone: "text-rose-700 dark:text-rose-300",
       bg: "bg-rose-50 dark:bg-rose-500/10",
       icon: ErrorCircleIcon,
@@ -178,15 +178,21 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
     eyebrow: "Payment Processing",
     title: "Confirming your payment",
     message:
-      "We are checking your payment status. Return to ShareDrive to refresh your wallet.",
+      "We are checking your payment status. Return to SharedDrive to refresh your wallet.",
     tone: "text-amber-700 dark:text-amber-300",
     bg: "bg-amber-50 dark:bg-amber-500/10",
     icon: LoadingIcon,
   };
 }
 
-// Deep link scheme for mobile app redirection
-const DEEP_LINK_SCHEME = "com.example.shared_drive";
+// The SharedDrive app (applicationId / bundle id com.maoltech.sharedrive)
+// registers no custom URL scheme. It only handles verified https links to
+// https://sharedrive.ng/payment/callback (Android App Links / iOS Universal
+// Links). Browsers don't hand same-site navigations to the app, so on Android
+// we target the app explicitly with an intent:// URL for that https link.
+const APP_PACKAGE = "com.maoltech.sharedrive";
+const APP_LINK_HOST = "sharedrive.ng";
+const APP_LINK_PATH = "/payment/callback";
 
 export function PaymentCallbackClient() {
   const [currentUrl, setCurrentUrl] = useState("https://sharedrive.ng/payment/callback");
@@ -239,7 +245,10 @@ export function PaymentCallbackClient() {
       searchParams.set(key, value);
     });
     searchParams.set("sd_payment_callback", "1");
-    return `${DEEP_LINK_SCHEME}://payment/callback?${searchParams.toString()}`;
+    const fallback = encodeURIComponent(
+      `https://${APP_LINK_HOST}${APP_LINK_PATH}?${searchParams.toString()}&sd_open_app=1`
+    );
+    return `intent://${APP_LINK_HOST}${APP_LINK_PATH}?${searchParams.toString()}#Intent;scheme=https;package=${APP_PACKAGE};S.browser_fallback_url=${fallback};end`;
   }, [params]);
 
   // Build fallback web URL for when deep link fails
@@ -257,7 +266,8 @@ export function PaymentCallbackClient() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    // Only Android can be redirected into the app from here (see APP_PACKAGE).
+    const isMobile = /Android/i.test(navigator.userAgent);
     const alreadyTried = sessionStorage.getItem(`sd_payment_open:${currentUrl}`);
 
     if (!isMobile || alreadyTried || params.get("sd_open_app") === "1") {
@@ -283,6 +293,11 @@ export function PaymentCallbackClient() {
 
   const openApp = () => {
     setIsRedirecting(true);
+    if (!/Android/i.test(navigator.userAgent)) {
+      // iOS has no custom scheme to open; the Universal Link is the page itself.
+      window.location.assign(appUrl);
+      return;
+    }
     // Try deep link first with fallback to web URL
     const fallbackTimer = window.setTimeout(() => {
       window.location.assign(appUrl);
@@ -341,7 +356,7 @@ export function PaymentCallbackClient() {
                   </>
                 ) : (
                   <>
-                    Open ShareDrive
+                    Open SharedDrive
                     <ArrowRightIcon className="h-5 w-5" />
                   </>
                 )}
@@ -363,7 +378,7 @@ export function PaymentCallbackClient() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  ShareDrive wallet
+                  SharedDrive wallet
                 </p>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white sm:text-xl">
                   Payment summary

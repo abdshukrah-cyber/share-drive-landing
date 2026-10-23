@@ -21,7 +21,7 @@ export default function HowItWorksPage() {
           >
             How{" "}
             <span className="text-[#57370D] dark:text-[#E8B26A]">
-              ShareDrive
+              SharedDrive
             </span>{" "}
             Works
           </motion.h1>
@@ -31,7 +31,7 @@ export default function HowItWorksPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
-            Whether you&apos;re looking for a ride or offering one, ShareDrive
+            Whether you&apos;re looking for a ride or offering one, SharedDrive
             makes carpooling in Lagos simple, safe, and affordable.
           </motion.p>
         </div>
@@ -222,7 +222,7 @@ export default function HowItWorksPage() {
               Your Safety is Our Priority
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              We&apos;ve built multiple layers of safety into ShareDrive to
+              We&apos;ve built multiple layers of safety into SharedDrive to
               ensure every ride is secure.
             </p>
           </motion.div>
@@ -343,7 +343,7 @@ export default function HowItWorksPage() {
             <div className="relative w-64 aspect-[9/18]">
               <Image
                 src="/image/sharedrivepg.png"
-                alt="ShareDrive App Interface"
+                alt="SharedDrive App Interface"
                 fill
                 className="object-contain drop-shadow-2xl"
               />
@@ -364,7 +364,7 @@ export default function HowItWorksPage() {
             Ready to Get Started?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            ShareDrive is live. Sign up on the web app and start enjoying
+            SharedDrive is live. Sign up on the web app and start enjoying
             smarter commuting in Lagos today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -394,9 +394,8 @@ const riderSteps = [
     title: "Create Your Profile",
     desc: "Sign up and complete your verification to join our trusted community.",
     details: [
-      "Quick phone number verification",
+      "Quick phone number or email verification",
       "Upload a clear profile photo",
-      "Optional: Connect social accounts for trust badges",
       "Set your preferred pickup and drop-off areas",
     ],
     icon: (
@@ -412,7 +411,7 @@ const riderSteps = [
       "Search by route, time, or pickup point",
       "View driver profiles and ratings",
       "See estimated cost before booking",
-      "Filter by car type or amenities",
+      "Join recurring rides for your daily commute",
     ],
     icon: (
       <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -426,8 +425,8 @@ const riderSteps = [
     details: [
       "Send a ride request with one tap",
       "In-app messaging with driver",
-      "Share your live location for pickup",
-      "Get real-time notifications",
+      "Follow your driver's live location",
+      "Cancel free up to 2 hours before departure (30% fee after that)",
     ],
     icon: (
       <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -457,10 +456,10 @@ const driverSteps = [
     title: "Register Your Vehicle",
     desc: "Add your car details and complete driver verification.",
     details: [
-      "Upload driver&apos;s license and vehicle documents",
-      "Vehicle inspection verification",
-      "Background check completion",
-      "Set your driver preferences",
+      "Upload your driver's licence and vehicle documents",
+      "Add a vehicle photo and your car's make, model, colour and plate",
+      "Our team reviews your documents",
+      "Publish rides once you're approved",
     ],
     icon: (
       <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -491,7 +490,7 @@ const driverSteps = [
       "View rider profiles and ratings",
       "Accept or decline requests",
       "Coordinate pickup points via chat",
-      "Set pickup time windows",
+      "Start the trip at pickup; after a 10-minute wait past departure, mark no-shows (you get 50%)",
     ],
     icon: (
       <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -505,8 +504,9 @@ const driverSteps = [
     details: [
       "Navigate with in-app directions",
       "Automatic fare collection",
-      "Weekly payouts to your bank",
+      "Withdraw your earnings to your bank on demand",
       "Build your driver rating",
+      "Late cancellations (under 2 hours) count as strikes; 3 in 30 days pause publishing for 7 days",
     ],
     icon: (
       <svg className="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -518,8 +518,8 @@ const driverSteps = [
 
 const safetyFeatures = [
   {
-    title: "ID Verification",
-    desc: "All users must verify their identity with valid government ID before using ShareDrive.",
+    title: "Verified Drivers",
+    desc: "Drivers' licences and vehicle documents are reviewed before they can publish rides, and every user verifies their phone number or email.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
@@ -527,8 +527,8 @@ const safetyFeatures = [
     ),
   },
   {
-    title: "Live Trip Sharing",
-    desc: "Share your ride details and live location with trusted contacts during every trip.",
+    title: "Trip Sharing & Live Tracking",
+    desc: "Follow your driver on a live map and share your trip details with people you trust.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -547,7 +547,7 @@ const safetyFeatures = [
   },
   {
     title: "Emergency Button",
-    desc: "Quick access emergency button connects you to local authorities instantly.",
+    desc: "One tap alerts your emergency contacts and co-rider with your location, with a quick call to 112.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
@@ -564,8 +564,8 @@ const safetyFeatures = [
     ),
   },
   {
-    title: "24/7 Support",
-    desc: "Our support team is available around the clock to assist with any issues.",
+    title: "Responsive Support",
+    desc: "Email admin@sharedrive.ng and our team typically responds within 24 hours on business days.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />

@@ -4,14 +4,15 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Delete Your Account",
   description:
-    "How to delete your ShareDrive account and personal data from the app, or by emailing our team if you can't sign in.",
+    "How to delete your SharedDrive account and personal data from the app, or by emailing our team if you can't sign in.",
   path: "/account-deletion",
 });
 
 const steps = [
-  "Open the ShareDrive mobile app and sign in.",
-  "Go to Account or Profile settings.",
-  "Choose Delete Account and follow the confirmation prompts.",
+  "Finish or cancel any pending, confirmed or ongoing rides.",
+  "Withdraw your wallet balance to your bank account. You can't delete an account while it still has money in its wallet.",
+  "Open the SharedDrive app (web or mobile), sign in and go to Account.",
+  "Tap Delete account and confirm. If something is still blocking deletion, the app tells you what to do first.",
   "If you cannot access the app, email admin@sharedrive.ng from your registered email address.",
 ];
 
@@ -24,12 +25,13 @@ export default function AccountDeletionPage() {
             Account deletion
           </p>
           <h1 className="mb-5 text-4xl font-extrabold md:text-5xl">
-            Delete your ShareDrive account
+            Delete your SharedDrive account
           </h1>
           <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-            You can request deletion in the ShareDrive app. This page explains
-            the request path and the data that may be retained for legal,
-            safety, fraud-prevention, payment, and dispute-resolution reasons.
+            You can delete your account yourself in the SharedDrive app. This
+            page explains what you need to do first, what happens to your
+            personal data, and which records we keep for legal, safety,
+            fraud-prevention, payment and dispute-resolution reasons.
           </p>
         </div>
       </section>
@@ -54,14 +56,21 @@ export default function AccountDeletionPage() {
             <h2 className="mb-4 text-2xl font-bold">Data handling</h2>
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p>
-                Account deletion disables your login and removes or anonymizes
-                profile data that is no longer needed to provide the service.
+                Before you can delete your account, you must have no pending,
+                confirmed or ongoing rides, and your wallet balance must be zero
+                (withdraw it first).
               </p>
               <p>
-                Some records may be retained where required for payment records,
-                fraud prevention, safety investigations, legal obligations,
-                dispute handling, tax/accounting requirements, and platform
-                integrity.
+                When you delete your account, you are signed out and can no
+                longer log in. Your personal information, such as your name,
+                email address, phone number and profile photo, is anonymised so
+                it can no longer be linked to you.
+              </p>
+              <p>
+                Ride, payment and wallet transaction records are kept in
+                anonymised form where we need them for accounting and tax,
+                fraud prevention, safety investigations, dispute handling and
+                other legal obligations.
               </p>
               <p>
                 To ask about retained records, contact{" "}

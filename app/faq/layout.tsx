@@ -4,7 +4,7 @@ import { faqs } from "./faq-data";
 export const metadata = pageMetadata({
   title: "FAQ",
   description:
-    "Answers to common questions about ShareDrive carpooling in Lagos: signing up, finding rides, driver verification, safety and payments.",
+    "Answers to common questions about SharedDrive carpooling in Lagos: signing up, finding rides, driver verification, safety and payments.",
   path: "/faq",
 });
 

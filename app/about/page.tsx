@@ -17,7 +17,7 @@ export default function AboutPage() {
           >
             About{" "}
             <span className="text-[#57370D] dark:text-[#E8B26A]">
-              ShareDrive
+              SharedDrive
             </span>
           </motion.h1>
           <motion.p
@@ -45,7 +45,7 @@ export default function AboutPage() {
             </h2>
             <div className="flex flex-col gap-4 text-gray-600 dark:text-gray-400">
               <p>
-                ShareDrive was born out of a simple observation: millions of
+                SharedDrive was born out of a simple observation: millions of
                 Lagosians sit in traffic every day, many heading in the same
                 direction, each in their own car. Meanwhile, fuel prices
                 continue to rise, roads get more congested, and commute times
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 riders get a comfortable, affordable ride?
               </p>
               <p>
-                That&apos;s how ShareDrive was born - a platform built
+                That&apos;s how SharedDrive was born - a platform built
                 specifically for Lagos, understanding our unique traffic
                 patterns, routes, and the trust factor that&apos;s essential for
                 Nigerians.
@@ -73,7 +73,7 @@ export default function AboutPage() {
           >
             <Image
               src="/image/sharedrive.png"
-              alt="ShareDrive App"
+              alt="SharedDrive App"
               fill
               className="object-contain"
             />
@@ -168,7 +168,7 @@ export default function AboutPage() {
               Our Values
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              The principles that guide everything we do at ShareDrive.
+              The principles that guide everything we do at SharedDrive.
             </p>
           </motion.div>
 
@@ -259,7 +259,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             Be part of the movement that&apos;s changing how Lagos moves.
-            ShareDrive is live on the web today, with our Android and iOS apps
+            SharedDrive is live on the web today, with our Android and iOS apps
             coming soon.
           </p>
           <a
@@ -280,7 +280,7 @@ const values = [
   {
     icon: "🛡️",
     title: "Safety First",
-    desc: "Every user is verified. Trust is non-negotiable in everything we build.",
+    desc: "Drivers are reviewed before they publish rides. Trust is non-negotiable in everything we build.",
   },
   {
     icon: "🤝",

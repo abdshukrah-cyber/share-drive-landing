@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Terms of Service",
   description:
-    "The terms and conditions for using ShareDrive, the carpooling platform for riders and drivers in Lagos, Nigeria.",
+    "The terms and conditions for using SharedDrive, the carpooling platform for riders and drivers in Lagos, Nigeria.",
   path: "/terms",
 });
 

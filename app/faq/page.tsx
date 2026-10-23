@@ -39,7 +39,7 @@ export default function FAQPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
-            Everything you need to know about ShareDrive. Can&apos;t find the
+            Everything you need to know about SharedDrive. Can&apos;t find the
             answer you&apos;re looking for?{" "}
             <Link
               href="/contact"

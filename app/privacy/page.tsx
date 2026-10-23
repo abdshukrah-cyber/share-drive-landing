@@ -23,7 +23,7 @@ export default function PrivacyPage() {
             transition={{ delay: 0.1 }}
             className="text-gray-600 dark:text-gray-400"
           >
-            Last updated: May 29, 2026
+            Last updated: October 21, 2026
           </motion.p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function PrivacyPage() {
         >
           <div className="bg-gray-50 dark:bg-[#1e1e1e] rounded-2xl p-6 mb-8 border border-gray-100 dark:border-gray-800">
             <p className="text-sm text-gray-600 dark:text-gray-400 m-0">
-              At ShareDrive, we take your privacy seriously. This Privacy Policy
+              At SharedDrive, we take your privacy seriously. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your
               information when you use our mobile application and website.
             </p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           <h2>1. Information We Collect</h2>
           <h3>Personal Information</h3>
           <p>
-            When you register for ShareDrive, we may collect the following
+            When you register for SharedDrive, we may collect the following
             personal information:
           </p>
           <ul>
@@ -55,28 +55,59 @@ export default function PrivacyPage() {
             <li>Email address</li>
             <li>Phone number</li>
             <li>Profile photograph</li>
-            <li>Government-issued identification (for verification purposes)</li>
-            <li>Payment information</li>
+            <li>
+              Your Bank Verification Number (BVN) and date of birth, only if you
+              choose to verify your identity with BVN where this option is offered
+            </li>
+            <li>
+              Bank account details you add for withdrawals, and wallet and payment
+              records (card details are entered with and held by our payment
+              partners, not stored by us)
+            </li>
           </ul>
+
+          <h3>Emergency Contacts</h3>
+          <p>
+            If you add emergency contacts, we store their names, phone numbers
+            and (optionally) your relationship to them so we can alert them when you use the emergency
+            button. Please only add people who have agreed to be your emergency
+            contact.
+          </p>
 
           <h3>Driver-Specific Information</h3>
           <p>If you register as a driver, we additionally collect:</p>
           <ul>
-            <li>Driver&apos;s license information</li>
-            <li>Vehicle registration details</li>
-            <li>Vehicle insurance information</li>
-            <li>Vehicle photographs</li>
+            <li>A photo or scan of your driver&apos;s licence</li>
+            <li>Vehicle documents you upload</li>
+            <li>Vehicle photographs and details (make, model, colour, plate number)</li>
+            <li>The outcome of our document review, including any decline reason</li>
           </ul>
+          <p>
+            Our team reviews these documents to decide whether you can publish
+            rides.
+          </p>
 
           <h3>Location Information</h3>
           <p>
             We collect location data to provide our carpooling services, including:
           </p>
           <ul>
-            <li>GPS location during rides (for navigation and safety)</li>
-            <li>Pickup and drop-off locations</li>
-            <li>Frequently traveled routes (to suggest matches)</li>
+            <li>
+              Your device location during an active trip: a driver&apos;s live
+              location is shared with the riders on that trip, and your location
+              is used to check you are near the pickup point when a trip starts
+            </li>
+            <li>Pickup and drop-off locations and the routes of rides you post or join</li>
+            <li>
+              Your location at the moment you press the emergency button, which is
+              sent to your emergency contacts and co-rider
+            </li>
           </ul>
+          <p>
+            We only access your device location with your permission, and you can
+            turn it off in your device settings (some trip features will not work
+            without it).
+          </p>
 
           <h3>Usage Information</h3>
           <p>We automatically collect information about your use of our services:</p>
@@ -113,9 +144,40 @@ export default function PrivacyPage() {
 
           <h3>With Service Providers</h3>
           <p>
-            We may share information with third-party vendors who perform services
-            on our behalf, such as payment processing, data analysis, email
-            delivery, and customer support.
+            We share information with service providers who process it on our
+            behalf, only as needed for the services they provide:
+          </p>
+          <ul>
+            <li>
+              <strong>Paystack</strong> and <strong>Flutterwave</strong> &ndash;
+              wallet funding, card, bank transfer and USSD payments, and
+              withdrawals to your bank account
+            </li>
+            <li>
+              <strong>Google (Firebase)</strong> &ndash; push notifications
+              (Firebase Cloud Messaging) and, if you use it, Google sign-in
+            </li>
+            <li>
+              <strong>Google Maps Platform</strong> &ndash; maps, place search,
+              directions and live trip maps
+            </li>
+            <li>
+              <strong>Facebook</strong> &ndash; sign-in, only if you choose to sign
+              in with Facebook
+            </li>
+            <li>Email and SMS delivery providers, for verification codes, alerts and receipts</li>
+            <li>Hosting and infrastructure providers that store and run our service</li>
+          </ul>
+          <p>
+            Some of these providers may process data outside Nigeria. Where they do,
+            we rely on the safeguards permitted under the Nigeria Data Protection
+            Act 2023.
+          </p>
+
+          <h3>With Your Emergency Contacts</h3>
+          <p>
+            When you press the emergency button, we send your name, trip details and
+            current location to your saved emergency contacts and your co-rider.
           </p>
 
           <h3>For Legal Purposes</h3>
@@ -156,9 +218,19 @@ export default function PrivacyPage() {
             business purposes, such as resolving disputes and enforcing our
             agreements.
           </p>
+          <p>
+            When you delete your account, we anonymise the personal information in
+            your profile (such as your name, email, phone number and photo). We keep
+            transaction and ride records, without your personal details, where we
+            need them for accounting, fraud prevention and legal obligations. See{" "}
+            <Link href="/account-deletion">Account deletion</Link> for details.
+          </p>
 
           <h2>6. Your Rights</h2>
-          <p>You have the right to:</p>
+          <p>
+            Under the Nigeria Data Protection Act 2023 (NDPA), you have the right
+            to:
+          </p>
           <ul>
             <li>Access the personal information we hold about you</li>
             <li>Request correction of inaccurate information</li>
@@ -166,16 +238,24 @@ export default function PrivacyPage() {
             <li>Object to processing of your personal information</li>
             <li>Request restriction of processing</li>
             <li>Data portability</li>
-            <li>Withdraw consent at any time</li>
+            <li>Withdraw consent at any time, without affecting earlier processing</li>
+            <li>Not be subject to decisions based solely on automated processing</li>
           </ul>
           <p>
             To exercise these rights, please contact us at{" "}
-            <a href="mailto:admin@sharedrive.ng">admin@sharedrive.ng</a>.
+            <a href="mailto:admin@sharedrive.ng">admin@sharedrive.ng</a>. We will
+            respond within the time required by the NDPA. If you are not satisfied
+            with our response, you can lodge a complaint with the Nigeria Data
+            Protection Commission (NDPC) at{" "}
+            <a href="https://ndpc.gov.ng" target="_blank" rel="noopener noreferrer">
+              ndpc.gov.ng
+            </a>
+            .
           </p>
 
           <h2>7. Children&apos;s Privacy</h2>
           <p>
-            ShareDrive is not intended for use by individuals under the age of 18.
+            SharedDrive is not intended for use by individuals under the age of 18.
             We do not knowingly collect personal information from children. If you
             believe we have collected information from a child, please contact us
             immediately.
