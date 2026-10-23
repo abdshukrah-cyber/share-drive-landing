@@ -21,7 +21,7 @@ export default function HowItWorksPage() {
           >
             How{" "}
             <span className="text-[#57370D] dark:text-[#E8B26A]">
-              SharedDrive
+              ShareDrive
             </span>{" "}
             Works
           </motion.h1>
@@ -31,7 +31,7 @@ export default function HowItWorksPage() {
             transition={{ delay: 0.1 }}
             className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
           >
-            Whether you&apos;re looking for a ride or offering one, SharedDrive
+            Whether you&apos;re looking for a ride or offering one, ShareDrive
             makes carpooling in Lagos simple, safe, and affordable.
           </motion.p>
         </div>
@@ -222,7 +222,7 @@ export default function HowItWorksPage() {
               Your Safety is Our Priority
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              We&apos;ve built multiple layers of safety into SharedDrive to
+              We&apos;ve built multiple layers of safety into ShareDrive to
               ensure every ride is secure.
             </p>
           </motion.div>
@@ -343,7 +343,7 @@ export default function HowItWorksPage() {
             <div className="relative w-64 aspect-[9/18]">
               <Image
                 src="/image/sharedrivepg.png"
-                alt="SharedDrive App Interface"
+                alt="ShareDrive App Interface"
                 fill
                 className="object-contain drop-shadow-2xl"
               />
@@ -364,7 +364,7 @@ export default function HowItWorksPage() {
             Ready to Get Started?
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            SharedDrive is live. Sign up on the web app and start enjoying
+            ShareDrive is live. Sign up on the web app and start enjoying
             smarter commuting in Lagos today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -67,13 +67,13 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
                 src="/image/sharedrive.png"
-                alt="SharedDrive Logo"
+                alt="ShareDrive Logo"
                 width={40}
                 height={40}
                 className="rounded-lg"
               />
               <span className="font-bold text-xl text-[#57370D] dark:text-[#E8B26A]">
-                SharedDrive
+                ShareDrive
               </span>
             </Link>
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
@@ -214,7 +214,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              {new Date().getFullYear()} SharedDrive Nigeria. All rights
+              {new Date().getFullYear()} ShareDrive Nigeria. All rights
               reserved.
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">

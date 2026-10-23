@@ -38,7 +38,7 @@ export default function PrivacyPage() {
         >
           <div className="bg-gray-50 dark:bg-[#1e1e1e] rounded-2xl p-6 mb-8 border border-gray-100 dark:border-gray-800">
             <p className="text-sm text-gray-600 dark:text-gray-400 m-0">
-              At SharedDrive, we take your privacy seriously. This Privacy Policy
+              At ShareDrive, we take your privacy seriously. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your
               information when you use our mobile application and website.
             </p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           <h2>1. Information We Collect</h2>
           <h3>Personal Information</h3>
           <p>
-            When you register for SharedDrive, we may collect the following
+            When you register for ShareDrive, we may collect the following
             personal information:
           </p>
           <ul>
@@ -255,7 +255,7 @@ export default function PrivacyPage() {
 
           <h2>7. Children&apos;s Privacy</h2>
           <p>
-            SharedDrive is not intended for use by individuals under the age of 18.
+            ShareDrive is not intended for use by individuals under the age of 18.
             We do not knowingly collect personal information from children. If you
             believe we have collected information from a child, please contact us
             immediately.

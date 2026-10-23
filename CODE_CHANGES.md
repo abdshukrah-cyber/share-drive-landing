@@ -5,7 +5,7 @@
 ### Changes Summary
 - ✅ Added `ErrorCircleIcon` component for failed status
 - ✅ Added `LoadingIcon` component for pending status with spinning animation
-- ✅ Added `DEEP_LINK_SCHEME` constant: `com.example.shared_drive`
+- ✅ Added `DEEP_LINK_SCHEME` constant: `com.maoltech.sharedrive`
 - ✅ Enhanced `normalizeStatus()` to include "declined" status
 - ✅ Enhanced `statusCopy()` to include icon components for each status
 - ✅ Added `isRedirecting` state to track redirect attempts
@@ -23,7 +23,7 @@
 
 **1. Deep Link Support**
 ```typescript
-const DEEP_LINK_SCHEME = "com.example.shared_drive";
+const DEEP_LINK_SCHEME = "com.maoltech.sharedrive";
 
 const deepLinkUrl = useMemo(() => {
   const searchParams = new URLSearchParams();

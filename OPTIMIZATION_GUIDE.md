@@ -8,20 +8,20 @@ This document outlines the optimizations made to the payment callback route for 
 ## 1. Deep Link Implementation ✅
 
 ### What Changed
-Added support for the **`com.example.shared_drive`** deep link scheme to enable seamless mobile app redirection.
+Added support for the **`com.maoltech.sharedrive`** deep link scheme to enable seamless mobile app redirection.
 
 ### How It Works
 ```typescript
-const DEEP_LINK_SCHEME = "com.example.shared_drive";
+const DEEP_LINK_SCHEME = "com.maoltech.sharedrive";
 
 // Deep link format:
-// com.example.shared_drive://payment/callback?status=success&tx_ref=ABC123&amount=5000
+// com.maoltech.sharedrive://payment/callback?status=success&tx_ref=ABC123&amount=5000
 ```
 
 ### Mobile Flow
 1. User completes payment on external provider (e.g., Flutterwave, Paystack)
 2. Callback redirected to: `https://sharedrive.ng/payment/callback?status=success&tx_ref=ABC123...`
-3. Page attempts to open deep link: `com.example.shared_drive://payment/callback?status=success&...`
+3. Page attempts to open deep link: `com.maoltech.sharedrive://payment/callback?status=success&...`
 4. If deep link fails (app not installed), falls back to web URL after 1.5s
 5. All payment parameters are preserved and passed to mobile app
 
@@ -37,7 +37,7 @@ Add this to your mobile app's `AndroidManifest.xml`:
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data
-            android:scheme="com.example.shared_drive"
+            android:scheme="com.maoltech.sharedrive"
             android:host="payment"
             android:pathPrefix="/callback" />
     </intent-filter>
@@ -334,7 +334,7 @@ useEffect(() => {
 ### Common Issues
 
 **Deep link not opening app:**
-- Verify scheme in AndroidManifest.xml matches `com.example.shared_drive`
+- Verify scheme in AndroidManifest.xml matches `com.maoltech.sharedrive`
 - Check app is installed on device
 - Ensure no redirect loop in app
 

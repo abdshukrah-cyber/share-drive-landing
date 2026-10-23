@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Support",
   description:
-    "Get help from SharedDrive with app support, safety reports, account issues, payment questions, privacy requests and driver verification.",
+    "Get help from ShareDrive with app support, safety reports, account issues, payment questions, privacy requests and driver verification.",
   path: "/support",
 });
 
@@ -13,14 +13,14 @@ const supportOptions = [
     title: "Account and app support",
     description:
       "Get help with sign in, profile verification, ride activity, wallet questions, and app issues.",
-    href: "mailto:admin@sharedrive.ng?subject=SharedDrive%20support%20request",
+    href: "mailto:admin@sharedrive.ng?subject=ShareDrive%20support%20request",
     label: "Email support",
   },
   {
     title: "Safety or abuse reports",
     description:
       "Report unsafe ride behavior, suspicious accounts, harassment, payment concerns, or content abuse.",
-    href: "mailto:admin@sharedrive.ng?subject=SharedDrive%20safety%20report",
+    href: "mailto:admin@sharedrive.ng?subject=ShareDrive%20safety%20report",
     label: "Report an issue",
   },
   {
@@ -38,13 +38,13 @@ export default function SupportPage() {
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-[#57370D] dark:text-[#E8B26A]">
-            SharedDrive support
+            ShareDrive support
           </p>
           <h1 className="mb-5 text-4xl font-extrabold md:text-5xl">
             How can we help?
           </h1>
           <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-            Contact SharedDrive for app support, safety reports, account help,
+            Contact ShareDrive for app support, safety reports, account help,
             payment questions, privacy requests, and driver verification issues.
           </p>
         </div>

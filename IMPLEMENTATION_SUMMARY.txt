@@ -7,7 +7,7 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ DEEP LINK SUPPORT
-   └─ Deep link scheme: com.example.shared_drive://payment/callback
+   └─ Deep link scheme: com.maoltech.sharedrive://payment/callback
    └─ Preserves all payment parameters through deep link
    └─ Automatic fallback to web URL (1.5s timeout)
    └─ Prevents redirect loops with session storage
@@ -144,7 +144,7 @@ Full:     /payment/callback?status=success&tx_ref=tx_789&transaction_id=txid_999
 
 1. 📱 Mobile App (Android)
    └─ Add deep link to AndroidManifest.xml
-   └─ Configure: com.example.shared_drive://payment/callback
+   └─ Configure: com.maoltech.sharedrive://payment/callback
    └─ See: OPTIMIZATION_GUIDE.md for code
 
 2. 🔌 Payment Providers

@@ -24,7 +24,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#57370D] dark:bg-[#E8B26A] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#57370D] dark:bg-[#E8B26A]"></span>
               </span>
-              Now Live - Ride with SharedDrive Today
+              Now Live - Ride with ShareDrive Today
             </motion.div>
 
             <motion.h1
@@ -68,7 +68,7 @@ export default function Home() {
             <div className="relative w-full max-w-[400px] aspect-[9/18]">
               <Image
                 src="/image/sharedrive.png"
-                alt="SharedDrive App Mockup showing Lagos carpool map"
+                alt="ShareDrive App Mockup showing Lagos carpool map"
                 fill
                 className="object-contain drop-shadow-2xl"
                 sizes="(max-width: 768px) 100vw, 400px"
@@ -114,7 +114,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-[#57370D] dark:text-[#E8B26A]">
-              Why Choose SharedDrive?
+              Why Choose ShareDrive?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
               The most trusted carpooling platform for Lagos. Here&apos;s what
@@ -159,7 +159,7 @@ export default function Home() {
               Experience the App
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              A glimpse into how SharedDrive makes your daily commute seamless.
+              A glimpse into how ShareDrive makes your daily commute seamless.
             </p>
           </motion.div>
 
@@ -172,7 +172,7 @@ export default function Home() {
             >
               <Image
                 src="/image/sharedrivepg.png"
-                alt="SharedDrive app showing ride details"
+                alt="ShareDrive app showing ride details"
                 fill
                 className="object-contain drop-shadow-xl rounded-3xl"
               />
@@ -187,7 +187,7 @@ export default function Home() {
             >
               <Image
                 src="/image/sharedrive.png"
-                alt="SharedDrive app showing Lagos map"
+                alt="ShareDrive app showing Lagos map"
                 fill
                 className="object-contain drop-shadow-2xl rounded-3xl"
               />
@@ -202,7 +202,7 @@ export default function Home() {
             >
               <Image
                 src="/image/sharedrivett.png"
-                alt="SharedDrive app showing ride booking"
+                alt="ShareDrive app showing ride booking"
                 fill
                 className="object-contain drop-shadow-xl rounded-3xl"
               />
@@ -223,7 +223,7 @@ export default function Home() {
             Easy as 1-2-3-4
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Getting started with SharedDrive is simple.{" "}
+            Getting started with ShareDrive is simple.{" "}
             <Link
               href="/how-it-works"
               className="text-[#57370D] dark:text-[#E8B26A] hover:underline"
@@ -327,7 +327,7 @@ export default function Home() {
             Ready to change how you commute?
           </h2>
           <p className="text-white/80 text-xl mb-10 max-w-2xl mx-auto">
-            SharedDrive is live. Open the web app and find your first shared
+            ShareDrive is live. Open the web app and find your first shared
             ride today &mdash; our mobile apps are on the way.
           </p>
           <GetApp variant="onDark" className="max-w-lg mx-auto" />
@@ -441,7 +441,7 @@ const testimonials = [
     name: "Adaobi Okonkwo",
     role: "Marketing Manager, Victoria Island",
     quote:
-      "I used to spend over 3 hours daily in Lagos traffic. SharedDrive is exactly what we needed - finally, a solution built for Lagosians by Lagosians!",
+      "I used to spend over 3 hours daily in Lagos traffic. ShareDrive is exactly what we needed - finally, a solution built for Lagosians by Lagosians!",
   },
   {
     name: "Emeka Nwosu",
@@ -453,6 +453,6 @@ const testimonials = [
     name: "Funke Adeyemi",
     role: "Bank Executive, Ikeja",
     quote:
-      "Fuel prices are crazy right now. Splitting costs while also reducing my carbon footprint is a win-win. SharedDrive just makes sense!",
+      "Fuel prices are crazy right now. Splitting costs while also reducing my carbon footprint is a win-win. ShareDrive just makes sense!",
   },
 ];

@@ -11,11 +11,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: "SharedDrive - The Smarter Way to Move Lagos",
-    template: "%s | SharedDrive",
+    default: "ShareDrive - The Smarter Way to Move Lagos",
+    template: "%s | ShareDrive",
   },
   description:
-    "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable with SharedDrive.",
+    "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable with ShareDrive.",
   keywords: [
     "carpooling",
     "Lagos",
@@ -26,24 +26,24 @@ export const metadata: Metadata = {
     "save money",
     "fuel",
   ],
-  authors: [{ name: "SharedDrive Nigeria" }],
-  creator: "SharedDrive",
-  publisher: "SharedDrive Nigeria",
+  authors: [{ name: "ShareDrive Nigeria" }],
+  creator: "ShareDrive",
+  publisher: "ShareDrive Nigeria",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_NG",
     url: "https://sharedrive.ng",
-    siteName: "SharedDrive",
-    title: "SharedDrive - The Smarter Way to Move Lagos",
+    siteName: "ShareDrive",
+    title: "ShareDrive - The Smarter Way to Move Lagos",
     description:
       "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable.",
     images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SharedDrive - The Smarter Way to Move Lagos",
+    title: "ShareDrive - The Smarter Way to Move Lagos",
     description:
       "Join the community of savvy Lagosians sharing rides. Save on fuel, reduce traffic, and make your daily commute more enjoyable.",
     images: [OG_IMAGE.url],

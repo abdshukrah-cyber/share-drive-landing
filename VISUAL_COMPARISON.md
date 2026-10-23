@@ -145,7 +145,7 @@ Transaction ID  TXN456
 
 ```
 ┌─ DEEP LINK SUPPORT ─────────────────────────┐
-│ com.example.shared_drive://payment/callback │
+│ com.maoltech.sharedrive://payment/callback │
 │ ↓                                           │
 │ Attempts deep link (mobile app)            │
 │ ↓                                           │

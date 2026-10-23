@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://sharedrive.ng";
-export const SITE_NAME = "SharedDrive";
+export const SITE_NAME = "ShareDrive";
 
 export const OG_IMAGE = {
   url: "/image/sharedrive.png",
   width: 1408,
   height: 768,
-  alt: "SharedDrive app showing a Lagos carpool route",
+  alt: "ShareDrive app showing a Lagos carpool route",
 };
 
 // Next.js shallow-merges openGraph/twitter, so each page must restate the

@@ -39,8 +39,8 @@ export default function TermsPage() {
           <div className="bg-gray-50 dark:bg-[#1e1e1e] rounded-2xl p-6 mb-8 border border-gray-100 dark:border-gray-800">
             <p className="text-sm text-gray-600 dark:text-gray-400 m-0">
               Please read these Terms of Service (&quot;Terms&quot;) carefully
-              before using the SharedDrive mobile application and website
-              (&quot;Service&quot;) operated by SharedDrive Nigeria
+              before using the ShareDrive mobile application and website
+              (&quot;Service&quot;) operated by ShareDrive Nigeria
               (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;).
             </p>
           </div>
@@ -54,16 +54,16 @@ export default function TermsPage() {
 
           <h2>2. Description of Service</h2>
           <p>
-            SharedDrive is a carpooling platform that connects drivers traveling to
+            ShareDrive is a carpooling platform that connects drivers traveling to
             their destinations with riders heading in the same direction. We
             facilitate the arrangement of shared rides but are not a transportation
             provider ourselves.
           </p>
           <p>
-            SharedDrive does not provide transportation services and is not a
+            ShareDrive does not provide transportation services and is not a
             transportation carrier. It is up to the driver to offer transportation
             services which may be accepted by riders through use of the Service.
-            SharedDrive is not responsible for the conduct of any user of the
+            ShareDrive is not responsible for the conduct of any user of the
             Service.
           </p>
 
@@ -147,14 +147,14 @@ export default function TermsPage() {
           <h2>7. Payments and Fees</h2>
           <h3>Payment Processing</h3>
           <p>
-            All payments for rides are processed through the SharedDrive platform.
+            All payments for rides are processed through the ShareDrive platform.
             By using the Service, you authorize us to charge your selected payment
             method for all fees incurred.
           </p>
 
           <h3>Driver Earnings</h3>
           <p>
-            Drivers set their own prices for rides. SharedDrive may charge a service
+            Drivers set their own prices for rides. ShareDrive may charge a service
             fee on transactions processed through the platform.
           </p>
 
@@ -168,7 +168,7 @@ export default function TermsPage() {
           <ul>
             <li>
               Cancelling 2 hours or more before departure is free: the full
-              amount you paid is refunded to your SharedDrive wallet.
+              amount you paid is refunded to your ShareDrive wallet.
             </li>
             <li>
               Cancelling less than 2 hours before departure incurs a cancellation
@@ -216,7 +216,7 @@ export default function TermsPage() {
 
           <h3>Wallet and Withdrawals</h3>
           <p>
-            Rides are paid from your SharedDrive wallet, which you can fund by
+            Rides are paid from your ShareDrive wallet, which you can fund by
             card, bank transfer or USSD through our payment partners. Drivers can
             withdraw their withdrawable balance to a Nigerian bank account on
             demand. Recent earnings may be held for a short period before they
@@ -233,7 +233,7 @@ export default function TermsPage() {
           <h2>9. Intellectual Property</h2>
           <p>
             The Service and its original content, features, and functionality are
-            owned by SharedDrive Nigeria and are protected by international
+            owned by ShareDrive Nigeria and are protected by international
             copyright, trademark, patent, trade secret, and other intellectual
             property laws.
           </p>
@@ -242,11 +242,11 @@ export default function TermsPage() {
           <p>
             THE SERVICE IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS
             AVAILABLE&quot; BASIS WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS OR
-            IMPLIED. SHAREDDRIVE DOES NOT WARRANT THAT THE SERVICE WILL BE
+            IMPLIED. SHAREDRIVE DOES NOT WARRANT THAT THE SERVICE WILL BE
             UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE.
           </p>
           <p>
-            SHAREDDRIVE DOES NOT GUARANTEE THE QUALITY, SUITABILITY, SAFETY, OR
+            SHAREDRIVE DOES NOT GUARANTEE THE QUALITY, SUITABILITY, SAFETY, OR
             ABILITY OF DRIVERS OR RIDERS. YOU AGREE THAT THE ENTIRE RISK ARISING
             OUT OF YOUR USE OF THE SERVICE REMAINS SOLELY WITH YOU.
           </p>
@@ -254,7 +254,7 @@ export default function TermsPage() {
           <h2>11. Limitation of Liability</h2>
           <p>
             TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
-            SHAREDDRIVE, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE
+            SHAREDRIVE, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE
             FOR ANY INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
             EXEMPLARY DAMAGES ARISING OUT OF OR IN CONNECTION WITH THESE TERMS OR
             THE SERVICE.
@@ -262,7 +262,7 @@ export default function TermsPage() {
 
           <h2>12. Indemnification</h2>
           <p>
-            You agree to defend, indemnify, and hold harmless SharedDrive and its
+            You agree to defend, indemnify, and hold harmless ShareDrive and its
             officers, directors, employees, and agents from and against any claims,
             liabilities, damages, losses, and expenses arising out of or in any way
             connected with your access to or use of the Service.

@@ -4,14 +4,14 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Delete Your Account",
   description:
-    "How to delete your SharedDrive account and personal data from the app, or by emailing our team if you can't sign in.",
+    "How to delete your ShareDrive account and personal data from the app, or by emailing our team if you can't sign in.",
   path: "/account-deletion",
 });
 
 const steps = [
   "Finish or cancel any pending, confirmed or ongoing rides.",
   "Withdraw your wallet balance to your bank account. You can't delete an account while it still has money in its wallet.",
-  "Open the SharedDrive app (web or mobile), sign in and go to Account.",
+  "Open the ShareDrive app (web or mobile), sign in and go to Account.",
   "Tap Delete account and confirm. If something is still blocking deletion, the app tells you what to do first.",
   "If you cannot access the app, email admin@sharedrive.ng from your registered email address.",
 ];
@@ -25,10 +25,10 @@ export default function AccountDeletionPage() {
             Account deletion
           </p>
           <h1 className="mb-5 text-4xl font-extrabold md:text-5xl">
-            Delete your SharedDrive account
+            Delete your ShareDrive account
           </h1>
           <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400">
-            You can delete your account yourself in the SharedDrive app. This
+            You can delete your account yourself in the ShareDrive app. This
             page explains what you need to do first, what happens to your
             personal data, and which records we keep for legal, safety,
             fraud-prevention, payment and dispute-resolution reasons.

@@ -5,7 +5,7 @@ This is the optimized version of the ShareDrive landing page with **production-r
 ## ✨ What's New
 
 ### 🔗 Deep Link Support
-- Deep link scheme: `com.example.shared_drive://payment/callback`
+- Deep link scheme: `com.maoltech.sharedrive://payment/callback`
 - Seamless mobile app redirection with all payment parameters
 - Automatic fallback to web URL if app not installed
 
@@ -109,7 +109,7 @@ Add to `AndroidManifest.xml`:
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data
-            android:scheme="com.example.shared_drive"
+            android:scheme="com.maoltech.sharedrive"
             android:host="payment"
             android:pathPrefix="/callback" />
     </intent-filter>
@@ -208,7 +208,7 @@ https://sharedrive.ng/payment/callback
 
 ### After
 ```
-✅ Full deep link support (com.example.shared_drive://)
+✅ Full deep link support (com.maoltech.sharedrive://)
 ✅ Handles 12+ parameter variations
 ✅ Dynamic status icons with animations
 ✅ Amount displayed with ₦ formatting
@@ -249,7 +249,7 @@ Check browser console (F12) for debug messages with `[v0]` prefix:
 ```
 [v0] Current URL: https://...
 [v0] Query Params: { status, tx_ref, amount, ... }
-[v0] Deep Link URL: com.example.shared_drive://...
+[v0] Deep Link URL: com.maoltech.sharedrive://...
 [v0] Status: success
 [v0] Failed to copy reference: [Error]
 ```
@@ -257,7 +257,7 @@ Check browser console (F12) for debug messages with `[v0]` prefix:
 ### Common Issues
 
 **Q: Deep link not opening app?**
-- A: Check scheme in `AndroidManifest.xml` matches `com.example.shared_drive`
+- A: Check scheme in `AndroidManifest.xml` matches `com.maoltech.sharedrive`
 
 **Q: Parameters not showing?**
 - A: Check query parameter names match supported formats (see `QUICK_REFERENCE.md`)
@@ -333,7 +333,7 @@ git push origin main
 ## 💡 Tips
 
 - Test on real mobile devices, not just browser
-- Use deep link testing tools: `adb shell am start -W -a android.intent.action.VIEW -d "com.example.shared_drive://payment/callback?status=success"`
+- Use deep link testing tools: `adb shell am start -W -a android.intent.action.VIEW -d "com.maoltech.sharedrive://payment/callback?status=success"`
 - Monitor payment callback success rate post-deployment
 - Add server-side webhook verification for security
 - Consider adding email receipt to user after payment

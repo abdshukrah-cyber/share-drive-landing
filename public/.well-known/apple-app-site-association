@@ -9,7 +9,7 @@
         "components": [
           {
             "/": "/payment/callback",
-            "comment": "SharedDrive payment callback"
+            "comment": "ShareDrive payment callback"
           }
         ]
       }

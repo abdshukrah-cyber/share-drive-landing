@@ -3,7 +3,7 @@
 ## ✅ What Was Optimized
 
 ### 1. **Deep Link Integration** (NEW)
-- ✅ Added `com.example.shared_drive` deep link scheme
+- ✅ Added `com.maoltech.sharedrive` deep link scheme
 - ✅ Preserves all payment parameters through deep link
 - ✅ Automatic fallback to web URL if app not installed
 - ✅ Prevents redirect loops with session storage tracking
@@ -57,7 +57,7 @@
 
 | Feature | Before | After |
 |---------|--------|-------|
-| Deep Link Support | ❌ None | ✅ `com.example.shared_drive://` |
+| Deep Link Support | ❌ None | ✅ `com.maoltech.sharedrive://` |
 | Status Display | Basic text | Enhanced with icons & colors |
 | Query Params | 3 types | 12+ variations supported |
 | Amount Display | Not shown | Formatted with ₦ symbol |
@@ -85,7 +85,7 @@ https://sharedrive.ng/payment/callback?status=success&tx_ref=ref_123&transaction
 ### Mobile App Deep Link
 When deep link is opened:
 ```
-com.example.shared_drive://payment/callback?status=success&tx_ref=ABC123&amount=5000
+com.maoltech.sharedrive://payment/callback?status=success&tx_ref=ABC123&amount=5000
 ```
 
 Your mobile app receives all query parameters and can:
@@ -105,7 +105,7 @@ Your mobile app receives all query parameters and can:
 
 2. **Callback page loads** → Generates deep link:
    ```
-   com.example.shared_drive://payment/callback?status=success&tx_ref=ABC123
+   com.maoltech.sharedrive://payment/callback?status=success&tx_ref=ABC123
    ```
 
 3. **Mobile redirect attempt** → Tries to open deep link
@@ -127,7 +127,7 @@ Add to `AndroidManifest.xml`:
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data
-            android:scheme="com.example.shared_drive"
+            android:scheme="com.maoltech.sharedrive"
             android:host="payment"
             android:pathPrefix="/callback" />
     </intent-filter>

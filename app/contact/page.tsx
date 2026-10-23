@@ -415,7 +415,7 @@ export default function ContactPage() {
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
             Check out our FAQ page for answers to the most common questions
-            about SharedDrive.
+            about ShareDrive.
           </p>
           <Link
             href="/faq"

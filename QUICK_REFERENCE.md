@@ -2,7 +2,7 @@
 
 ## 🔗 Deep Link Scheme
 ```
-com.example.shared_drive://payment/callback?status=success&tx_ref=ABC123&amount=5000
+com.maoltech.sharedrive://payment/callback?status=success&tx_ref=ABC123&amount=5000
 ```
 
 ## 📍 Callback Route
@@ -62,7 +62,7 @@ https://sharedrive.ng/payment/callback
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="com.example.shared_drive"
+        <data android:scheme="com.maoltech.sharedrive"
               android:host="payment"
               android:pathPrefix="/callback" />
     </intent-filter>
@@ -124,7 +124,7 @@ Console messages appear with `[v0]` prefix:
 ```
 [v0] Current URL: https://...
 [v0] Query Params: { status, tx_ref, amount, ... }
-[v0] Deep Link URL: com.example.shared_drive://...
+[v0] Deep Link URL: com.maoltech.sharedrive://...
 [v0] Status: success
 [v0] Failed to copy reference: [Error]
 ```
@@ -160,7 +160,7 @@ Mobile app receives all parameters
 ## 📞 Common Issues
 
 **Deep link not opening?**
-- Check AndroidManifest.xml scheme matches `com.example.shared_drive`
+- Check AndroidManifest.xml scheme matches `com.maoltech.sharedrive`
 - Verify app is installed
 - Test with different payment provider
 

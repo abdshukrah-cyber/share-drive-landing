@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "How It Works",
   description:
-    "Learn how SharedDrive carpooling works in Lagos: find drivers going your way, book a seat, share live trips and split the cost securely.",
+    "Learn how ShareDrive carpooling works in Lagos: find drivers going your way, book a seat, share live trips and split the cost securely.",
   path: "/how-it-works",
 });
 

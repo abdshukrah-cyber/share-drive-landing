@@ -86,7 +86,7 @@ git push origin main
 - [ ] Configure deep link in AndroidManifest.xml (if Android)
 - [ ] Configure deep link in Info.plist (if iOS)
 - [ ] Handle deep link parameters in payment callback activity/view controller
-- [ ] Test deep link with: `adb shell am start -W -a android.intent.action.VIEW -d "com.example.shared_drive://payment/callback?status=success"`
+- [ ] Test deep link with: `adb shell am start -W -a android.intent.action.VIEW -d "com.maoltech.sharedrive://payment/callback?status=success"`
 - [ ] Release new mobile app version
 - [ ] Announce update to users (if auto-update not enabled)
 

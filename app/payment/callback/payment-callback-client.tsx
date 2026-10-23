@@ -155,7 +155,7 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
       eyebrow: "Payment Complete",
       title: "Payment received",
       message:
-        "Your payment is complete. Return to SharedDrive so your wallet can refresh.",
+        "Your payment is complete. Return to ShareDrive so your wallet can refresh.",
       tone: "text-emerald-700 dark:text-emerald-300",
       bg: "bg-emerald-50 dark:bg-emerald-500/10",
       icon: CheckCircleIcon,
@@ -167,7 +167,7 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
       eyebrow: "Payment Failed",
       title: "Payment was not completed",
       message:
-        "You can return to SharedDrive to check your wallet or try funding again.",
+        "You can return to ShareDrive to check your wallet or try funding again.",
       tone: "text-rose-700 dark:text-rose-300",
       bg: "bg-rose-50 dark:bg-rose-500/10",
       icon: ErrorCircleIcon,
@@ -178,14 +178,14 @@ function statusCopy(status: ReturnType<typeof normalizeStatus>) {
     eyebrow: "Payment Processing",
     title: "Confirming your payment",
     message:
-      "We are checking your payment status. Return to SharedDrive to refresh your wallet.",
+      "We are checking your payment status. Return to ShareDrive to refresh your wallet.",
     tone: "text-amber-700 dark:text-amber-300",
     bg: "bg-amber-50 dark:bg-amber-500/10",
     icon: LoadingIcon,
   };
 }
 
-// The SharedDrive app (applicationId / bundle id com.maoltech.sharedrive)
+// The ShareDrive app (applicationId / bundle id com.maoltech.sharedrive)
 // registers no custom URL scheme. It only handles verified https links to
 // https://sharedrive.ng/payment/callback (Android App Links / iOS Universal
 // Links). Browsers don't hand same-site navigations to the app, so on Android
@@ -356,7 +356,7 @@ export function PaymentCallbackClient() {
                   </>
                 ) : (
                   <>
-                    Open SharedDrive
+                    Open ShareDrive
                     <ArrowRightIcon className="h-5 w-5" />
                   </>
                 )}
@@ -378,7 +378,7 @@ export function PaymentCallbackClient() {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  SharedDrive wallet
+                  ShareDrive wallet
                 </p>
                 <h2 className="text-lg font-bold text-gray-900 dark:text-white sm:text-xl">
                   Payment summary

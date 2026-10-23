@@ -11,7 +11,7 @@ Your ShareDrive payment callback route has been **fully optimized** with product
 ### 1. Core Optimizations
 
 #### 🔗 Deep Link Support (NEW)
-- ✅ Added `com.example.shared_drive` deep link scheme
+- ✅ Added `com.maoltech.sharedrive` deep link scheme
 - ✅ Seamless mobile app redirection with all payment parameters preserved
 - ✅ Automatic fallback to web URL (1.5s timeout) if app not installed
 - ✅ Prevents redirect loops with session storage
@@ -276,7 +276,7 @@ Follow `DEPLOYMENT_CHECKLIST.md` for step-by-step deployment
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="com.example.shared_drive"
+        <data android:scheme="com.maoltech.sharedrive"
               android:host="payment"
               android:pathPrefix="/callback" />
     </intent-filter>

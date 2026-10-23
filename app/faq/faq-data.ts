@@ -11,29 +11,29 @@ export const categories: { id: FAQCategory; label: string }[] = [
 export const faqs: Record<FAQCategory, { question: string; answer: string }[]> = {
   general: [
     {
-      question: "What is SharedDrive?",
+      question: "What is ShareDrive?",
       answer:
-        "SharedDrive is a carpooling platform designed specifically for Lagos, Nigeria. We connect drivers heading to work or other destinations with riders going the same way, helping everyone save on fuel costs while reducing traffic congestion.",
+        "ShareDrive is a carpooling platform designed specifically for Lagos, Nigeria. We connect drivers heading to work or other destinations with riders going the same way, helping everyone save on fuel costs while reducing traffic congestion.",
     },
     {
-      question: "Is SharedDrive live?",
+      question: "Is ShareDrive live?",
       answer:
-        "Yes! SharedDrive is live now. You can sign up and start sharing rides today on our web app at app.sharedrive.ng. Our Android app is coming very soon, and the iOS app is coming soon.",
+        "Yes! ShareDrive is live now. You can sign up and start sharing rides today on our web app at app.sharedrive.ng. Our Android app is coming very soon, and the iOS app is coming soon.",
     },
     {
-      question: "Is SharedDrive available outside Lagos?",
+      question: "Is ShareDrive available outside Lagos?",
       answer:
         "We're starting with Lagos as our primary market. Once we've established a strong presence there, we plan to expand to other major Nigerian cities like Abuja, Port Harcourt, and more.",
     },
     {
-      question: "How is SharedDrive different from Uber or Bolt?",
+      question: "How is ShareDrive different from Uber or Bolt?",
       answer:
-        "Unlike ride-hailing services where you pay for a dedicated car and driver, SharedDrive is for carpooling - sharing rides with people already heading your way. This makes it more affordable for riders and helps drivers offset their fuel costs rather than work as professional drivers.",
+        "Unlike ride-hailing services where you pay for a dedicated car and driver, ShareDrive is for carpooling - sharing rides with people already heading your way. This makes it more affordable for riders and helps drivers offset their fuel costs rather than work as professional drivers.",
     },
     {
-      question: "How do I access SharedDrive?",
+      question: "How do I access ShareDrive?",
       answer:
-        "SharedDrive is available now as a web app at app.sharedrive.ng, which works in the browser on any phone or computer. Our Android app is coming very soon to Google Play, and the iOS app is coming soon to the App Store.",
+        "ShareDrive is available now as a web app at app.sharedrive.ng, which works in the browser on any phone or computer. Our Android app is coming very soon to Google Play, and the iOS app is coming soon to the App Store.",
     },
   ],
   riders: [
@@ -60,7 +60,7 @@ export const faqs: Record<FAQCategory, { question: string; answer: string }[]> =
     {
       question: "What if my driver cancels?",
       answer:
-        "If a driver cancels your seat, removes you at pickup without marking a no-show, or pauses a recurring ride on a day you booked, you'll be notified and the full amount you paid for that day is refunded to your SharedDrive wallet. You can then search for another ride.",
+        "If a driver cancels your seat, removes you at pickup without marking a no-show, or pauses a recurring ride on a day you booked, you'll be notified and the full amount you paid for that day is refunded to your ShareDrive wallet. You can then search for another ride.",
     },
     {
       question: "How do I know my pickup point?",
@@ -102,7 +102,7 @@ export const faqs: Record<FAQCategory, { question: string; answer: string }[]> =
   ],
   safety: [
     {
-      question: "How does SharedDrive verify users?",
+      question: "How does ShareDrive verify users?",
       answer:
         "All users verify their phone number or email when they sign up. Drivers must also submit their driver's licence and vehicle documents, which our team reviews before they can publish rides.",
     },
@@ -139,9 +139,9 @@ export const faqs: Record<FAQCategory, { question: string; answer: string }[]> =
         "Drivers can withdraw their withdrawable balance to their bank account on demand, whenever they choose. Recent earnings may be held briefly before they become withdrawable.",
     },
     {
-      question: "What fees does SharedDrive charge?",
+      question: "What fees does ShareDrive charge?",
       answer:
-        "SharedDrive charges a small service fee to cover platform operations, payment processing, and user support. You'll always see the price before you confirm a ride.",
+        "ShareDrive charges a small service fee to cover platform operations, payment processing, and user support. You'll always see the price before you confirm a ride.",
     },
     {
       question: "Can I pay with cash?",
